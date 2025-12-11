@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSTDevelopers | Find Your Dream Home</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-content">
+      <div class="logo" data-page="home">
+        <img src="images/logo.png" alt="SST Logo" class="logo-image"
+          onerror="this.src='https://placehold.co/400x400/png?text=Logo'">
+        <span class="logo-text font-serif">SST<span class="highlight">Developers</span></span>
+      </div>
+
+      <nav>
+        <button data-page="home">Home</button>
+        <button data-page="home">Buy</button>
+        <button data-page="home" data-scroll-to="trending-properties">Projects</button>
+        <button data-page="home">Agents</button>
+        <button data-page="about">About Us</button>
+        <button data-page="contact">Contact</button>
+        <button onclick="openVirtualTour()">360° Virtual Tool</button>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="cta-button">Schedule Visit</button>
+        <button class="mobile-menu-toggle" data-icon="menu"></button>
+      </div>
+    </div>
+
+    <div class="mobile-menu hidden">
+      <button data-page="home">Home</button>
+      <button data-page="home">Buy</button>
+      <button data-page="home" data-scroll-to="trending-properties">Projects</button>
+      <button data-page="home">Agents</button>
+      <button data-page="about">About Us</button>
+      <button data-page="contact">Contact</button>
+      <button onclick="openVirtualTour()">360° Virtual Tool</button>
+      <button class="cta-button">Schedule Visit</button>
+    </div>
+  </header>
+
+  <!-- HOME PAGE -->
+  <div id="home-page" class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="images/property7.jpg" alt="Luxury Real Estate">
+      </div>
+      <div class="hero-content container">
+        <span class="hero-badge">Exclusive Luxury Living</span>
+        <h1 class="font-serif">Find Your Dream <br><span class="highlight">Home Today</span></h1>
+        <p>Premium Duplex, Villa & Mansion in Bhubaneswar</p>
+
+        <div class="search-bar">
+          <div class="search-grid">
+            <div class="search-field">
+              <span data-icon="mapPin"></span>
+              <div class="search-field-content">
+                <span class="search-field-label">Location</span>
+                <select>
+                  <option>Select Location</option>
+                  <option>Pahala</option>
+                  <option>Gohala</option>
+                </select>
+              </div>
+            </div>
+            <div class="search-field">
+              <span data-icon="home"></span>
+              <div class="search-field-content">
+                <span class="search-field-label">Type</span>
+                <select>
+                  <option>Property Type</option>
+                  <option>Duplex</option>
+                  <option>Villa</option>
+                  <option>Mansion</option>
+                </select>
+              </div>
+            </div>
+            <div class="search-field">
+              <span data-icon="indianRupee"></span>
+              <div class="search-field-content">
+                <span class="search-field-label">Budget</span>
+                <select>
+                  <option>Budget Range</option>
+                  <option>₹60 Lakhs</option>
+                  <option>₹75 Lakhs</option>
+                  <option>₹85 Lakhs</option>
+                  <option>₹1.05 Cr</option>
+                  <option>₹1.89 Cr</option>
+                </select>
+              </div>
+            </div>
+            <button class="search-button"><span data-icon="search"></span><span>Search</span></button>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <button class="primary-btn">View Properties</button>
+          <button class="secondary-btn">Schedule Site Visit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="bg-white">
+      <div class="container">
+        <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 3rem;">Browse By Category</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="category-icon" data-icon="building"></div>
+            <h3 class="category-name">Duplex</h3>
+            <span class="category-count">40+ Listings</span>
+          </div>
+          <div class="category-card">
+            <div class="category-icon" data-icon="home"></div>
+            <h3 class="category-name">Villas</h3>
+            <span class="category-count">50+ Listings</span>
+          </div>
+          <div class="category-card">
+            <div class="category-icon" data-icon="castle"></div>
+            <h3 class="category-name">Mansions</h3>
+            <span class="category-count">15+ Exclusive</span>
+          </div>
+          <div class="category-card">
+            <div class="category-icon" data-icon="trees"></div>
+            <h3 class="category-name">Gated Communities</h3>
+            <span class="category-count">15+ Projects</span>
+          </div>
+          <div class="category-card">
+            <div class="category-icon" data-icon="landPlot"></div>
+            <h3 class="category-name">Plots & Land</h3>
+            <span class="category-count">40+ Acres</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROPERTIES -->
+    <section class="bg-slate-50" id="trending-properties">
+      <div class="container">
+        <div
+          style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 class="section-title font-serif">Trending Properties Near You</h2>
+            <p class="section-subtitle">Handpicked selection of premium real estate.</p>
+          </div>
+          <button
+            style="display: flex; align-items: center; color: var(--secondary); font-weight: 700; background: none;">View
+            All Properties <span data-icon="arrowRight" style="margin-left: 0.5rem;"></span></button>
+        </div>
+
+        <div class="property-grid">
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images/property5.jpg" alt="Property">
+              <div class="property-badge">For Sale</div>
+              <div class="property-price">₹1.05 Cr</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Bungalow</div>
+              <h3 class="property-title">Akshita Paradise</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Pahala,Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 5 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 2500 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images/property4.jpg" alt="Property">
+              <div class="property-badge">For Sale</div>
+              <div class="property-price">₹85 L</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Duplex</div>
+              <h3 class="property-title">Akshita Vatika Ph-1</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohola Near Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 3,4 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1800 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images/property6.jpg" alt="Property">
+              <div class="property-badge">For Sale</div>
+              <div class="property-price">₹60 Lakhs</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Duplex</div>
+              <h3 class="property-title">Akshita Avenue</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohola Near Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 2,3,4 Beds</div>
+                <div class="property-feature"><span data-icon="bath"></span> 2,3,4 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1700 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images/property1.jpg" alt="Property">
+              <div class="property-badge">For Sale</div>
+              <div class="property-price">₹1.89 Cr</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Bungalow</div>
+              <h3 class="property-title">Akshita Mansion</h3>
+              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 5 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 2000 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images/property2.jpg" alt="Property">
+              <div class="property-badge">For Sale</div>
+              <div class="property-price">₹85 Lakhs</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Villa</div>
+              <h3 class="property-title">Akshita Vatika Ph-2</h3>
+              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 3/4/5 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 3/4/5Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1800 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images/property3.jpg" alt="Property">
+              <div class="property-badge">For Sale</div>
+              <div class="property-price">₹75 Lakhs</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Duplex</div>
+              <h3 class="property-title">Akshita Villas</h3>
+              <div class="property-location"><span data-icon="mapPin"></span> Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 3/4 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 3/4 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1700sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  </section>
+
+  <!-- UPCOMING PROJECTS -->
+  <section class="bg-white" id="upcoming-projects">
+    <div class="container">
+      <div
+        style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 class="section-title font-serif">Upcoming Projects</h2>
+          <p class="section-subtitle">Exclusive previews of our future landmarks.</p>
+        </div>
+        <button
+          style="display: flex; align-items: center; color: var(--secondary); font-weight: 700; background: none;">View
+          All Projects <span data-icon="arrowRight" style="margin-left: 0.5rem;"></span></button>
+      </div>
+
+      <div class="property-grid">
+        <!-- Card 1: Township Plotting (Clickable) -->
+        <div class="property-card" data-page="township" style="cursor: pointer;">
+          <div class="property-image">
+            <img src="images/property11.jpg" alt="Township Plotting">
+            <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+          </div>
+          <div class="property-info">
+            <div class="property-type">Township</div>
+            <h3 class="property-title">Aranya Township</h3>
+            <div class="property-location"><span data-icon="mapPin"></span>Khallikote, Ganjam</div>
+            <div class="property-features">
+              <div class="property-feature"><span data-icon="landPlot"></span> 2500 Acres</div>
+              <div class="property-feature"><span data-icon="shieldCheck"></span> RERA Approved</div>
+            </div>
+            <button class="property-button" style="background: var(--secondary); color: white; border: none;">View
+              Details</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="property-card">
+          <div class="property-image">
+            <img src="images/property8.jpg" alt="Upcoming Villa">
+            <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+          </div>
+          <div class="property-info">
+            <div class="property-type">Luxury Apartments</div>
+            <h3 class="property-title">Royal Palms</h3>
+            <div class="property-location"><span data-icon="mapPin"></span>Dhauli, Bhubaneswar</div>
+            <div class="property-features">
+              <div class="property-feature"><span data-icon="bed"></span> 4,5 BHK</div>
+              <div class="property-feature"><span data-icon="move"></span> 3500 sqft</div>
+            </div>
+            <button class="property-button">Notify Me</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="property-card">
+          <div class="property-image">
+            <img src="images/property9.jpg" alt="Commercial Hub">
+            <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+          </div>
+          <div class="property-info">
+            <div class="property-type">Luxury Apartments & Villas</div>
+            <h3 class="property-title">SST Business Park</h3>
+            <div class="property-location"><span data-icon="mapPin"></span>Patrapada, Bhubaneswar</div>
+            <div class="property-features">
+              <div class="property-feature"><span data-icon="building"></span> 4 BHK</div>
+              <div class="property-feature"><span data-icon="move"></span> 500-2000 sqft</div>
+            </div>
+            <button class="property-button">Notify Me</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="property-card">
+          <div class="property-image">
+            <img src="images/property10.jpg" alt="Apartment Complex">
+            <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+          </div>
+          <div class="property-info">
+            <div class="property-type">Apartments</div>
+            <h3 class="property-title">Sudhansu Enclaves</h3>
+            <div class="property-location"><span data-icon="mapPin"></span>Khandagiri, Bhubaneswar</div>
+            <div class="property-features">
+              <div class="property-feature"><span data-icon="bed"></span> 2,3 BHK</div>
+              <div class="property-feature"><span data-icon="move"></span> 1200-1600 sqft</div>
+            </div>
+            <button class="property-button">Notify Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="about-section">
+        <div class="about-image">
+          <img src="https://picsum.photos/id/101/600/700" alt="About Us">
+          <div class="stats-badge hidden" style="display: none;">
+            <p>10+</p>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-badge">Our Story</span>
+          <h2 class="section-title font-serif">10 Years of Building <br>Trusted Homes</h2>
+          <p style="color: var(--slate-600); font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+            At SSTDevelopers, we believe home is more than just a place to live—it's where memories are made. With a
+            decade of experience, we have successfully delivered trusted, high-quality, and legally verified
+            properties to thousands of families.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <p>1200+</p>
+              <p>Happy Families</p>
+            </div>
+            <div class="stat-card">
+              <p>20+</p>
+              <p>Completed Projects</p>
+            </div>
+            <div class="stat-card">
+              <p>100%</p>
+              <p>RERA Approved</p>
+            </div>
+          </div>
+          <button
+            style="margin-top: 2rem; padding: 0.75rem 2rem; background: var(--primary); color: var(--white); font-weight: 700; border-radius: 9999px; box-shadow: 0 10px 15px rgba(0,0,0,0.1);">Learn
+            More About Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="bg-slate-50">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title font-serif">Why Choose SSTDevelopers?</h2>
+        <p class="section-subtitle">We simplify the home buying journey with trust and transparency.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" data-icon="shieldCheck"></div>
+          <h3>RERA Registered</h3>
+          <p>All projects are RERA compliant for your peace of mind.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" data-icon="checkCircle"></div>
+          <h3>100% Verified</h3>
+          <p>Thorough legal checks on every property listing.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" data-icon="indianRupee"></div>
+          <h3>Zero Brokerage</h3>
+          <p>Direct from developers, no hidden charges.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" data-icon="headset"></div>
+          <h3>24/7 Support</h3>
+          <p>Dedicated relationship managers for every query.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" data-icon="fileCheck"></div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden costs, what you see is what you pay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-white">
+    <div class="container">
+      <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 4rem;">What Our Clients Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <span class="quote-icon" data-icon="quote"></span>
+          <div class="testimonial-header">
+            <img src="https://picsum.photos/id/64/100/100" alt="Client" class="testimonial-avatar">
+            <div class="testimonial-author">
+              <h4>Raja Laxmi Panda</h4>
+              <span>Bhubaneswar, Odisha</span>
+            </div>
+          </div>
+          <p class="testimonial-text">"Finding our dream villa was seamless with SSTDevelopers. The transparency and
+            professionalism were unmatched."</p>
+          <div class="testimonial-stars">
+            <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
+              data-icon="star"></span><span data-icon="star"></span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-icon" data-icon="quote"></span>
+          <div class="testimonial-header">
+            <img src="https://picsum.photos/id/91/100/100" alt="Client" class="testimonial-avatar">
+            <div class="testimonial-author">
+              <h4>Pratyush Kumar</h4>
+              <span>Bhubaneswar, Odisha</span>
+            </div>
+          </div>
+          <p class="testimonial-text">"They helped me find the perfect commercial space for my startup. Excellent
+            support throughout the legal process."</p>
+          <div class="testimonial-stars">
+            <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
+              data-icon="star"></span><span data-icon="star"></span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-icon" data-icon="quote"></span>
+          <div class="testimonial-header">
+            <img src="https://picsum.photos/id/129/100/100" alt="Client" class="testimonial-avatar">
+            <div class="testimonial-author">
+              <h4>Bhagyadhar Bisoi</h4>
+              <span>Bhubaneswar, Odisha</span>
+            </div>
+          </div>
+          <p class="testimonial-text">"I loved the virtual tour features. It saved us so much time. Highly recommend
+            their verified listings."</p>
+          <div class="testimonial-stars">
+            <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
+              data-icon="star"></span><span data-icon="star"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- GALLERY OF EVENTS -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-title">
+        <h2 class="font-serif">Our Gallery of Events</h2>
+        <div class="divider"></div>
+        <p>A glimpse of our bond with trust</p>
+      </div>
+    </div>
+
+    <div class="marquee-container">
+      <div class="marquee-fade-left"></div>
+      <div class="marquee-fade-right"></div>
+
+      <div class="marquee-track animate-marquee">
+        <div class="marquee-item">
+          <img src="images/event1.jpg" alt="Team Meeting">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Team Meeting & Planning</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event2.jpg" alt="10 Years Celebration">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Celebrating 10 Years of Excellence</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event3.jpg" alt="Client Event">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Client Appreciation Event</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event4.jpg" alt="Project Launch">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>New Project Launch</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event5.jpg" alt="Award Ceremony">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Award Ceremony</span>
+          </div>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="marquee-item">
+          <img src="images/event1.jpg" alt="Team Meeting">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Team Meeting & Planning</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event2.jpg" alt="10 Years Celebration">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Celebrating 10 Years of Excellence</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event3.jpg" alt="Client Event">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Client Appreciation Event</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event4.jpg" alt="Project Launch">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>New Project Launch</span>
+          </div>
+        </div>
+        <div class="marquee-item">
+          <img src="images/event5.jpg" alt="Award Ceremony">
+          <div class="marquee-overlay"></div>
+          <div class="marquee-caption">
+            <span>Award Ceremony</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- OUR PARTNERS -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="partners-header">
+        <span class="partners-badge">Trusted By</span>
+        <h2 class="font-serif">Our Banking Partners</h2>
+        <div class="partners-divider"></div>
+        <p class="partners-subtitle">Collaborating with India's leading financial institutions to make your home loan
+          process seamless</p>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-logo-container">
+            <img src="images/partner1.png" alt="ICICI Bank" class="partner-logo">
+          </div>
+          <div class="partner-info">
+            <h4>ICICI Bank</h4>
+            <p>Competitive interest rates</p>
+          </div>
+        </div>
+
+        <div class="partner-card">
+          <div class="partner-logo-container">
+            <img src="images/partner2.png" alt="Indian Bank" class="partner-logo">
+          </div>
+          <div class="partner-info">
+            <h4>Indian Bank</h4>
+            <p>Quick loan approvals</p>
+          </div>
+        </div>
+
+        <div class="partner-card">
+          <div class="partner-logo-container">
+            <img src="images/partner3.png" alt="Indian Overseas Bank" class="partner-logo">
+          </div>
+          <div class="partner-info">
+            <h4>Indian Overseas Bank</h4>
+            <p>Flexible repayment options</p>
+          </div>
+        </div>
+
+        <div class="partner-card">
+          <div class="partner-logo-container">
+            <img src="images/partner4.png" alt="LIC Housing Finance" class="partner-logo">
+          </div>
+          <div class="partner-info">
+            <h4>LIC Housing Finance</h4>
+            <p>Trusted since 1989</p>
+          </div>
+        </div>
+
+        <div class="partner-card">
+          <div class="partner-logo-container">
+            <img src="images/partner5.png" alt="Punjab & Sind Bank" class="partner-logo">
+          </div>
+          <div class="partner-info">
+            <h4>Punjab & Sind Bank</h4>
+            <p>Personalized service</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="partners-cta">
+        <p>Need help with home loan assistance?</p>
+        <button class="partners-cta-button">
+          <span>Get Expert Guidance</span>
+          <span data-icon="arrowRight"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-slate-50">
+    <div class="container">
+      <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions
+      </h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you provide home loan assistance?</span>
+            <span data-icon="chevronDown"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we have tie-ups with all major banks to help you get the best interest rates and quick approvals.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the registration process work?</span>
+            <span data-icon="chevronDown"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Our legal team handles all documentation, verification, and registration procedures to ensure a
+              hassle-free experience.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I schedule a site visit on weekends?</span>
+            <span data-icon="chevronDown"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! We arrange site visits 7 days a week. You can also opt for our cab pick-up service.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is there any cancellation fee?</span>
+            <span data-icon="chevronDown"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Cancellation policies vary by project. Generally, a nominal administrative fee is deducted if cancelled
+              before the agreement.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you provide interior design services?</span>
+            <span data-icon="chevronDown"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we offer premium interior design packages for our villas and apartments to help you move in
+              hassle-free.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are the maintenance charges?</span>
+            <span data-icon="chevronDown"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Maintenance charges are decided by the Residents' Welfare Association (RWA) upon handover, usually based
+              on
+              per sqft area.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="contact-section">
+        <div class="contact-info">
+          <h2 class="font-serif">Let's Discuss Your Dream Home</h2>
+          <p>Fill out the form and our premium property consultants will get in touch with you shortly.</p>
+          <div class="contact-steps">
+            <div class="contact-step">
+              <div class="step-number">1</div>
+              <p>Schedule a free consultation</p>
+            </div>
+            <div class="contact-step">
+              <div class="step-number">2</div>
+              <p>Visit properties with our experts</p>
+            </div>
+            <div class="contact-step">
+              <div class="step-number">3</div>
+              <p>Secure your home with zero hassle</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <h3>Request a Callback</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="John Doe" required>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="+1 (555) 000-0000" required>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Property Interest</label>
+              <select>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Plot</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Tell us about your requirements..."></textarea>
+            </div>
+            <button type="submit" class="submit-button">Request Callback <span data-icon="send"></span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- TOWNSHIP PLOTTING PAGE -->
+  <div id="township-page" class="page hidden">
+    <!-- HERO -->
+    <section class="hero" style="height: 60vh; min-height: 500px;">
+      <div class="hero-bg">
+        <img src="images/property11.jpg" alt="Township Project">
+      </div>
+      <div class="hero-content container">
+        <span class="hero-badge">Upcoming Grand Projects</span>
+        <h1 class="font-serif">Aranya <br><span class="highlight">Township</span></h1>
+        <p>A Self-Sustained Smart Community in Khallikote, Ganjam</p>
+        <button class="primary-btn"
+          onclick="document.getElementById('township-contact').scrollIntoView({behavior: 'smooth'})">Enquire
+          Now</button>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="bg-white">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title font-serif">Project Overview</h2>
+          <p class="section-subtitle">Experience the perfect blend of nature and modern infrastructure.</p>
+        </div>
+
+        <div class="stats-grid" style="margin-bottom: 4rem;">
+          <div class="stat-card">
+            <p>2500</p>
+            <p>Acres of Land</p>
+          </div>
+          <div class="stat-card">
+            <p>200+</p>
+            <p>Premium Plots</p>
+          </div>
+          <div class="stat-card">
+            <p>40%</p>
+            <p>Open Space</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div>
+            <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 1.5rem;">Why Choose Aranya Township?</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+              <li style="display: flex; align-items: center; gap: 1rem;">
+                <span data-icon="checkCircle" style="color: var(--secondary);"></span>
+                <span>RERA Approved Layout with Clear Titles</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 1rem;">
+                <span data-icon="checkCircle" style="color: var(--secondary);"></span>
+                <span>30ft, 40ft & 60ft Wide Blacktop Roads</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 1rem;">
+                <span data-icon="checkCircle" style="color: var(--secondary);"></span>
+                <span>Underground Electricity & Drainage System</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 1rem;">
+                <span data-icon="checkCircle" style="color: var(--secondary);"></span>
+                <span>Gated Community with 24/7 Security</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 1rem;">
+                <span data-icon="checkCircle" style="color: var(--secondary);"></span>
+                <span>Clubhouse, Park, and Jogging Track</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img src="images/property5.jpg" alt="master plan"
+              style="border-radius: 1rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
+          </div>
+        </div>
+
+        <!-- CONTACT FOR THIS PROJECT -->
+        <div id="township-contact"
+          style="margin-top: 5rem; max-width: 600px; margin-left: auto; margin-right: auto; text-align: center;">
+          <h3 class="font-serif" style="font-size: 1.5rem; margin-bottom: 2rem;">Interested in this Project?</h3>
+          <button class="primary-btn"
+            style="background: var(--secondary); color: white; padding: 1rem 3rem; border-radius: 999px; font-weight: bold; font-size: 1.1rem; border: none;"
+            onclick="window.scrollTo({ top: document.querySelector('#contact-form').offsetTop + 1000, behavior: 'smooth' }); document.querySelector('[data-page=\'contact\']').click();">Contact
+            Us for Pricing</button>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="about-page" class="page hidden">
+    <section
+      style="position: relative; height: 60vh; min-height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+      <div style="position: absolute; inset: 0;">
+        <div style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.6); z-index: 10;"></div>
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2070" alt="Office"
+          style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div style="position: relative; z-index: 20; text-align: center; color: white;" class="container">
+        <h1 class="font-serif" style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem;">Building Homes,
+          <br><span style="color: var(--secondary);">Building Trust</span>
+        </h1>
+        <p style="font-size: 1.5rem; max-width: 48rem; margin: 0 auto; font-weight: 300;">For over 10 years, we've
+          helped families find their perfect home with transparency, quality, and trust.</p>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Who We Are</span>
+          <h2 class="section-title font-serif">A Legacy of Excellence</h2>
+        </div>
+        <p
+          style="color: var(--slate-600); font-size: 1.125rem; line-height: 1.8; max-width: 56rem; margin: 0 auto 2rem; text-align: center;">
+          Founded in 2014, SSTDevelopers began with a simple mission: to simplify the home-buying process while
+          delivering world-class quality. We specialize in premium apartments, luxury villas, and sustainable gated
+          communities.
+        </p>
+      </div>
+    </section>
+
+    <!-- COMPANY VALUES -->
+    <section class="bg-slate-50">
+      <div class="container">
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon" data-icon="award"></div>
+            <h3>Quality First</h3>
+            <p>We never compromise on construction quality, using only premium materials and certified contractors.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon" data-icon="shield"></div>
+            <h3>Transparency</h3>
+            <p>Clear pricing, honest timelines, and complete documentation at every step of your journey.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon" data-icon="users"></div>
+            <h3>Customer Centric</h3>
+            <p>Your satisfaction is our success. We're with you from site visit to possession and beyond.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP TEAM -->
+    <section class="leadership-section">
+      <div class="container">
+        <div class="leadership-header">
+          <span class="leadership-badge">Meet Our Team</span>
+          <h2 class="font-serif">Leadership That Inspires</h2>
+          <div class="leadership-divider"></div>
+          <p class="leadership-subtitle">Driven by passion, guided by experience, and committed to excellence</p>
+        </div>
+
+        <div class="leadership-grid">
+          <!-- Managing Director -->
+          <div class="leader-card">
+            <div class="leader-image-container">
+              <img src="images/md.jpg" alt="Managing Director" class="leader-image">
+              <div class="leader-overlay">
+                <div class="leader-social">
+                  <a href="#" class="leader-social-link" data-icon="linkedin"></a>
+                  <a href="#" class="leader-social-link" data-icon="mail"></a>
+                </div>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3>Subrat Kumar Raj</h3>
+              <span class="leader-title">Founder & Managing Director</span>
+              <p class="leader-bio">With over 15 years of experience in real estate development, Subrat leads our vision
+                of creating sustainable, premium living spaces. His strategic insights and commitment to quality have
+                positioned SSTDevelopers as a trusted name in Bhubaneswar's real estate landscape.</p>
+              <div class="leader-stats">
+                <div class="leader-stat">
+                  <span class="stat-number">15+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="leader-stat">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Projects Delivered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Director -->
+          <div class="leader-card">
+            <div class="leader-image-container">
+              <img src="images/director.jpg" alt="Director" class="leader-image">
+              <div class="leader-overlay">
+                <div class="leader-social">
+                  <a href="#" class="leader-social-link" data-icon="linkedin"></a>
+                  <a href="#" class="leader-social-link" data-icon="mail"></a>
+                </div>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3>Suchismita Pati</h3>
+              <span class="leader-title">Director</span>
+              <p class="leader-bio">Suchismita brings exceptional expertise in project management and operations. Her
+                meticulous attention to detail ensures every project meets the highest standards of construction quality
+                and timely delivery, making her the backbone of our operational excellence.</p>
+              <div class="leader-stats">
+                <div class="leader-stat">
+                  <span class="stat-number">12+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="leader-stat">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">On-Time Delivery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Senior Manager Marketing -->
+          <div class="leader-card">
+            <div class="leader-image-container">
+              <img src="images/marketing-manager.jpg" alt="Senior Manager Marketing" class="leader-image">
+              <div class="leader-overlay">
+                <div class="leader-social">
+                  <a href="#" class="leader-social-link" data-icon="linkedin"></a>
+                  <a href="#" class="leader-social-link" data-icon="mail"></a>
+                </div>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3>Tanmay Kumar Sahu</h3>
+              <span class="leader-title">Senior Manager</span>
+              <p class="leader-bio">Tanmay's innovative strategies and deep understanding of customer needs have been
+                instrumental in building strong relationships with our clients. His dedication to excellence and
+                customer satisfaction ensures that every family finds their perfect home with us.</p>
+              <div class="leader-stats">
+                <div class="leader-stat">
+                  <span class="stat-number">10+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="leader-stat">
+                  <span class="stat-number">500+</span>
+                  <span class="stat-label">Happy Families</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Our Achievements</span>
+          <h2 class="section-title font-serif">Milestones That Matter</h2>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-number">10+</div>
+            <h4>Years of Excellence</h4>
+            <p>A decade of building trust and delivering quality homes</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-number">2000+</div>
+            <h4>Happy Families</h4>
+            <p>Proud to have helped families find their dream homes</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-number">75+</div>
+            <h4>Projects Completed</h4>
+            <p>Successfully delivered across Bhubaneswar</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-number">5M+</div>
+            <h4>Sq.Ft Developed</h4>
+            <p>Creating sustainable living spaces</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact-page" class="page hidden">
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="contact-hero-content">
+          <span class="contact-badge">Get In Touch</span>
+          <h1 class="font-serif">Let's Build Your Dream Home Together</h1>
+          <p>Our team of experts is ready to guide you through every step of your home-buying journey. Reach out to us
+            today!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Cards -->
+    <section class="contact-cards-section">
+      <div class="container">
+        <div class="contact-cards-grid">
+          <div class="contact-card">
+            <div class="contact-card-icon" data-icon="phone"></div>
+            <h3>Call Us</h3>
+            <p class="contact-card-label">Fri-Wed: 9:30 AM - 7:00 PM</p>
+            <a href="tel:+91 82600 65195" class="contact-card-link">+91 82600 65195</a>
+            <a href="tel:+919876543211" class="contact-card-link">+91 98765 43211</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon" data-icon="mail"></div>
+            <h3>Email Us</h3>
+            <p class="contact-card-label">We'll respond within 24 hours</p>
+            <a href="mailto:info@sstdevelopers.com" class="contact-card-link">shiridisait@gmail.com</a>
+            <a href="mailto:sales@sstdevelopers.com" class="contact-card-link">sales@sstdevelopers.com</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon" data-icon="mapPin"></div>
+            <h3>Visit Us</h3>
+            <p class="contact-card-label">Head Office</p>
+            <p class="contact-card-address">
+              Flat no 2001, Laxmipriya Twin city Tower, near Utkal Heights, Pahala, Bhubaneswar, Odisha 752101</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon" data-icon="clock"></div>
+            <h3>Office Hours</h3>
+            <p class="contact-card-label">Friday - Wednesday</p>
+            <p class="contact-card-time">9:30 AM - 7:00 PM</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="contact-form-grid">
+          <!-- Form -->
+          <div class="contact-form-wrapper">
+            <div class="contact-form-header">
+              <h2 class="font-serif">Send Us a Message</h2>
+              <p>Fill out the form below and our team will get back to you within 24 hours</p>
+            </div>
+
+            <form id="contact-form-2" onsubmit="handleContactSubmit(event)" class="enhanced-contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name *</label>
+                  <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label>Phone Number *</label>
+                  <input type="tel" placeholder="+91 98765 43210" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Email Address *</label>
+                  <input type="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label>Property Interest</label>
+                  <select>
+                    <option value="">Select Property Type</option>
+                    <option value="duplex">Duplex</option>
+                    <option value="villa">Villa</option>
+                    <option value="mansion">Mansion</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="plot">Plot/Land</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Budget Range</label>
+                <select>
+                  <option value="">Select Budget Range</option>
+                  <option value="50-75">₹50 Lakhs - ₹75 Lakhs</option>
+                  <option value="75-100">₹75 Lakhs - ₹1 Crore</option>
+                  <option value="100-150">₹1 Crore - ₹1.5 Crore</option>
+                  <option value="150+">₹1.5 Crore+</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Your Message *</label>
+                <textarea rows="5"
+                  placeholder="Tell us about your requirements, preferred location, timeline, or any questions you have..."
+                  required></textarea>
+              </div>
+
+              <div class="form-checkbox">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">I agree to receive updates and promotional materials from SSTDevelopers</label>
+              </div>
+
+              <button type="submit" class="enhanced-submit-button">
+                <span>Send Message</span>
+                <span data-icon="send"></span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info Sidebar -->
+          <div class="contact-sidebar">
+            <div class="contact-info-card">
+              <h3>Why Choose Us?</h3>
+              <ul class="contact-benefits">
+                <li>
+                  <span data-icon="check"></span>
+                  <span>10+ Years of Excellence</span>
+                </li>
+                <li>
+                  <span data-icon="check"></span>
+                  <span>2000+ Happy Families</span>
+                </li>
+                <li>
+                  <span data-icon="check"></span>
+                  <span>Zero Brokerage</span>
+                </li>
+                <li>
+                  <span data-icon="check"></span>
+                  <span>Transparent Pricing</span>
+                </li>
+                <li>
+                  <span data-icon="check"></span>
+                  <span>Home Loan Assistance</span>
+                </li>
+                <li>
+                  <span data-icon="check"></span>
+                  <span>24/7 Customer Support</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-info-card">
+              <h3>Quick Links</h3>
+              <div class="quick-links">
+                <a href="#" class="quick-link">
+                  <span data-icon="fileText"></span>
+                  <span>Download Brochure</span>
+                </a>
+                <a href="#" class="quick-link">
+                  <span data-icon="calendar"></span>
+                  <span>Schedule Site Visit</span>
+                </a>
+                <a href="#" class="quick-link">
+                  <span data-icon="calculator"></span>
+                  <span>EMI Calculator</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info-card social-card">
+              <h3>Follow Us</h3>
+              <div class="social-links-contact">
+                <a href="#" class="social-link-contact">
+                  <span data-icon="facebook"></span>
+                </a>
+                <a href="#" class="social-link-contact">
+                  <span data-icon="instagram"></span>
+                </a>
+                <a href="#" class="social-link-contact">
+                  <span data-icon="twitter"></span>
+                </a>
+                <a href="#" class="social-link-contact">
+                  <span data-icon="linkedin"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <h2 class="font-serif" style="text-align: center; margin-bottom: 2rem;">Find Us on Map</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.7262!2d85.8245!3d20.2961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDE3JzQ2LjAiTiA4NcKwNDknMjguMiJF!5e0!3m2!1sen!2sin!4v1234567890"
+            width="100%" height="450" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom: 1.5rem;">
+            <div class="logo-icon" data-icon="home"></div>
+            <span class="logo-text font-serif">SST<span class="highlight">Developers</span></span>
+          </div>
+          <p>Experience the pinnacle of luxury living. We help you find the perfect home that suits your lifestyle and
+            budget with transparency and trust.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" data-icon="facebook"></a>
+            <a href="#" class="social-link" data-icon="twitter"></a>
+            <a href="#" class="social-link" data-icon="instagram"></a>
+            <a href="#" class="social-link" data-icon="linkedin"></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="font-serif">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="about">About Us</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="#">New Projects</a></li>
+            <li><a href="#" data-page="contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="font-serif">Contact Us</h3>
+          <ul style="list-style: none;">
+            <li class="contact-item">
+              <span data-icon="mapPin"></span>
+              <span>2001, Laxmi Priya Twin City Tower, Pahala, Bhubaneswar</span>
+            </li>
+            <li class="contact-item">
+              <span data-icon="phone"></span>
+              <span>+91 9861113075</span>
+            </li>
+            <li class="contact-item">
+              <span data-icon="mail"></span>
+              <span>shiridisait@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="font-serif">Location</h3>
+          <a href="#" class="map-link" onclick="openGoogleMaps(); return false;">
+            <img src="https://picsum.photos/400/300?grayscale" alt="Map">
+            <div class="map-overlay">
+              <span class="map-badge">View on Google Maps</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 SSTDevelopers. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Design Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
