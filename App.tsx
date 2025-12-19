@@ -23,8 +23,8 @@ const App: React.FC = () => {
             <Hero />
             <FeaturedProperties />
             <PropertyCategories />
-            <AboutUs />
             <NewProjects />
+            <AboutUs />
             <WhyChooseUs />
             <Testimonials />
             <Gallery />
@@ -34,21 +34,21 @@ const App: React.FC = () => {
             <ContactForm />
           </div>
         )}
-        
+
         {currentPage === 'about' && (
           <AboutPage onNavigate={handleNavigate} />
         )}
 
         {currentPage === 'contact' && (
           <div className="pt-24 animate-in fade-in duration-500">
-             <div className="text-center py-10 bg-slate-50">
-               <h1 className="text-4xl font-serif font-bold text-slate-800">Contact Us</h1>
-               <p className="text-slate-500 mt-2">We are here to help you.</p>
-             </div>
-             <ContactForm />
-             <GalleryOfEvents />
-             <OurPartners />
-             <FAQ />
+            <div className="text-center py-10 bg-slate-50">
+              <h1 className="text-4xl font-serif font-bold text-slate-800">Contact Us</h1>
+              <p className="text-slate-500 mt-2">We are here to help you.</p>
+            </div>
+            <ContactForm />
+            <GalleryOfEvents />
+            <OurPartners />
+            <FAQ />
           </div>
         )}
       </main>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Users, Target, Clock, Trophy, Phone, CheckCircle2, Home, UserCheck, HardHat, FileText, Key, Award, Map } from 'lucide-react';
+import { ShieldCheck, Users, Target, Clock, Trophy, Phone, CheckCircle2, Home, UserCheck, HardHat, FileText, Key, Award } from 'lucide-react';
 
 export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }) => {
   return (
@@ -8,14 +8,14 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-slate-900/60 z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-            alt="Corporate Office" 
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            alt="Corporate Office"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-20 container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">Building Homes, <br/><span className="text-secondary">Building Trust</span></h1>
+          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">Building Homes, <br /><span className="text-secondary">Building Trust</span></h1>
           <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
             For over 10 years, we’ve helped families find their perfect home with transparency, quality, and trust.
           </p>
@@ -43,13 +43,13 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
               </div>
             </div>
             <div className="lg:w-1/2 relative">
-               <img 
-                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                 alt="Team Meeting" 
-                 className="rounded-2xl shadow-2xl w-full object-cover h-[500px]" 
-               />
-               <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-slate-100 rounded-full -z-10"></div>
-               <div className="absolute -top-8 -right-8 w-32 h-32 bg-secondary/10 rounded-full -z-10"></div>
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Team Meeting"
+                className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
+              />
+              <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-slate-100 rounded-full -z-10"></div>
+              <div className="absolute -top-8 -right-8 w-32 h-32 bg-secondary/10 rounded-full -z-10"></div>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Our Journey So Far</h2>
             <p className="text-slate-400 text-lg">Milestones that define our legacy.</p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
               { num: "10+", label: "Years Experience", icon: Clock },
@@ -167,30 +167,30 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-             <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4">Why Trust SSTDevelopers?</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4">Why Trust SSTDevelopers?</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-             {[
-               { title: "On-Time Delivery", desc: "We respect your time. Our track record of timely possession sets us apart.", icon: Clock },
-               { title: "Premium Quality", desc: "We use only top-tier materials and construction practices.", icon: Award },
-               { title: "Transparent Pricing", desc: "No hidden costs. Detailed breakdown of every penny you spend.", icon: FileText },
-               { title: "RERA Registered", desc: "100% legal compliance for complete peace of mind.", icon: ShieldCheck },
-               { title: "24/7 Support", desc: "Dedicated relationship managers for every client.", icon: Phone },
-               { title: "Zero Brokerage", desc: "Direct sales means no middleman commissions.", icon: UserCheck },
-             ].map((item, idx) => {
-               const Icon = item.icon;
-               return (
-                 <div key={idx} className="flex gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                   <div className="shrink-0 w-12 h-12 bg-blue-50 text-accent rounded-full flex items-center justify-center">
-                     <Icon size={24} />
-                   </div>
-                   <div>
-                     <h4 className="font-bold text-slate-800 text-lg mb-2">{item.title}</h4>
-                     <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-                   </div>
-                 </div>
-               )
-             })}
+            {[
+              { title: "On-Time Delivery", desc: "We respect your time. Our track record of timely possession sets us apart.", icon: Clock },
+              { title: "Premium Quality", desc: "We use only top-tier materials and construction practices.", icon: Award },
+              { title: "Transparent Pricing", desc: "No hidden costs. Detailed breakdown of every penny you spend.", icon: FileText },
+              { title: "RERA Registered", desc: "100% legal compliance for complete peace of mind.", icon: ShieldCheck },
+              { title: "24/7 Support", desc: "Dedicated relationship managers for every client.", icon: Phone },
+              { title: "Zero Brokerage", desc: "Direct sales means no middleman commissions.", icon: UserCheck },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div key={idx} className="flex gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className="shrink-0 w-12 h-12 bg-blue-50 text-accent rounded-full flex items-center justify-center">
+                    <Icon size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 text-lg mb-2">{item.title}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -213,7 +213,7 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
               { step: "05", title: "Handover", icon: Key },
             ].map((item, i) => {
               const Icon = item.icon;
-               return (
+              return (
                 <div key={i} className="flex flex-col items-center bg-white p-4">
                   <div className="w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center text-xl font-bold mb-4 shadow-lg border-4 border-white">
                     <Icon size={24} />
@@ -221,27 +221,27 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
                   <span className="text-secondary font-bold text-sm mb-1">Step {item.step}</span>
                   <h4 className="font-bold text-slate-800">{item.title}</h4>
                 </div>
-               )
+              )
             })}
           </div>
 
           {/* Mobile Process View */}
           <div className="md:hidden space-y-6">
-             {[
-               { step: "01", title: "Consultation", desc: "We understand your needs and budget." },
-               { step: "02", title: "Shortlisting", desc: "We present the best matching properties." },
-               { step: "03", title: "Site Visit", desc: "Guided tour of your potential future home." },
-               { step: "04", title: "Documentation", desc: "Transparent legal paperwork and loan assist." },
-               { step: "05", title: "Handover", desc: "Keys to your new dream home." },
+            {[
+              { step: "01", title: "Consultation", desc: "We understand your needs and budget." },
+              { step: "02", title: "Shortlisting", desc: "We present the best matching properties." },
+              { step: "03", title: "Site Visit", desc: "Guided tour of your potential future home." },
+              { step: "04", title: "Documentation", desc: "Transparent legal paperwork and loan assist." },
+              { step: "05", title: "Handover", desc: "Keys to your new dream home." },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl">
-                 <div className="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold shrink-0">
-                   {item.step}
-                 </div>
-                 <div>
-                   <h4 className="font-bold text-slate-800 text-lg">{item.title}</h4>
-                   <p className="text-slate-500 text-sm">{item.desc}</p>
-                 </div>
+                <div className="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold shrink-0">
+                  {item.step}
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-800 text-lg">{item.title}</h4>
+                  <p className="text-slate-500 text-sm">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -251,41 +251,41 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
       {/* 8. Awards */}
       <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4 text-center">
-           <h2 className="text-3xl font-serif font-bold mb-12">Awards & Recognition</h2>
-           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-80">
-              <div className="flex flex-col items-center">
-                <Trophy size={48} className="text-yellow-500 mb-4" />
-                <p className="font-bold">Best Developer 2023</p>
-                <p className="text-xs text-slate-400">Real Estate Awards</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Award size={48} className="text-yellow-500 mb-4" />
-                <p className="font-bold">Excellence in Design</p>
-                <p className="text-xs text-slate-400">Architecture Digest</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Users size={48} className="text-yellow-500 mb-4" />
-                <p className="font-bold">Customer Choice</p>
-                <p className="text-xs text-slate-400">Trust Index</p>
-              </div>
-           </div>
+          <h2 className="text-3xl font-serif font-bold mb-12">Awards & Recognition</h2>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-80">
+            <div className="flex flex-col items-center">
+              <Trophy size={48} className="text-yellow-500 mb-4" />
+              <p className="font-bold">Best Developer 2023</p>
+              <p className="text-xs text-slate-400">Real Estate Awards</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Award size={48} className="text-yellow-500 mb-4" />
+              <p className="font-bold">Excellence in Design</p>
+              <p className="text-xs text-slate-400">Architecture Digest</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Users size={48} className="text-yellow-500 mb-4" />
+              <p className="font-bold">Customer Choice</p>
+              <p className="text-xs text-slate-400">Trust Index</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* 9. Testimonials (Reused logic, different display if needed, but let's keep it simple) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-           <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-8">Words of Trust</h2>
-           <div className="bg-slate-50 p-8 md:p-12 rounded-2xl shadow-lg border border-slate-100">
-             <p className="text-xl md:text-2xl text-slate-600 italic mb-6">"Smooth experience from booking to handover. The team guided us clearly through every step. Very trustworthy builder with zero hidden charges."</p>
-             <div className="flex items-center justify-center gap-4">
-               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Rajesh" className="w-14 h-14 rounded-full object-cover" />
-               <div className="text-left">
-                 <p className="font-bold text-slate-900">Rajesh Kumar</p>
-                 <p className="text-xs text-secondary font-bold uppercase">Hyderabad, India</p>
-               </div>
-             </div>
-           </div>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-8">Words of Trust</h2>
+          <div className="bg-slate-50 p-8 md:p-12 rounded-2xl shadow-lg border border-slate-100">
+            <p className="text-xl md:text-2xl text-slate-600 italic mb-6">"Smooth experience from booking to handover. The team guided us clearly through every step. Very trustworthy builder with zero hidden charges."</p>
+            <div className="flex items-center justify-center gap-4">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Rajesh" className="w-14 h-14 rounded-full object-cover" />
+              <div className="text-left">
+                <p className="font-bold text-slate-900">Rajesh Kumar</p>
+                <p className="text-xs text-secondary font-bold uppercase">Hyderabad, India</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -301,7 +301,7 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
             <button className="px-8 py-4 bg-white text-secondary font-bold rounded-full shadow-lg hover:bg-slate-100 transition-colors">
               Request a Callback
             </button>
-            <button 
+            <button
               onClick={() => onNavigate('contact')}
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors"
             >
@@ -317,14 +317,14 @@ export const AboutPage: React.FC<{ onNavigate: (page: string) => void }> = ({ on
 // Helper for map icon
 function Map({ size }: { size: number }) {
   return (
-    <svg 
-      width={size} 
-      height={size} 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
       strokeLinejoin="round"
     >
       <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
