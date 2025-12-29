@@ -57,6 +57,10 @@ const icons = {
     headset: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>`,
 
     fileCheck: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>`,
+
+    calendar: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`,
+
+    clock: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`,
 };
 
 // ===== STATE MANAGEMENT =====
@@ -192,6 +196,131 @@ function openGoogleMaps() {
     window.open('https://maps.app.goo.gl/sizUKhK4UD62tTWV8', '_blank');
 }
 
+// ===== SCHEDULE VISIT MODAL =====
+function openScheduleVisitModal() {
+    const modal = $('#schedule-visit-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+
+        // Set minimum date to today
+        const dateInput = $('#visit-date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+        // Reinject icons in modal
+        modal.querySelectorAll('[data-icon]').forEach(el => {
+            const iconName = el.getAttribute('data-icon');
+            if (icons[iconName]) {
+                el.innerHTML = icons[iconName];
+            }
+        });
+    }
+}
+
+function closeScheduleVisitModal() {
+    const modal = $('#schedule-visit-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+
+        // Reset form
+        const form = $('#schedule-visit-form');
+        if (form) {
+            form.reset();
+        }
+    }
+}
+
+function handleScheduleVisitSubmit(e) {
+    e.preventDefault();
+    alert('Thank you! We will contact you shortly to confirm your visit.');
+    closeScheduleVisitModal();
+}
+
+// ===== MODAL LOGIC =====
+function showProjectDetails(el) {
+    const modal = $('#project-modal');
+    if (!modal) return;
+
+    // Get data from attributes
+    const d = el.dataset;
+
+    // Populate modal
+    $('#modal-title').innerText = d.title || '';
+    $('#modal-loc-text').innerText = d.location || '';
+    $('#modal-price').innerText = d.price || '';
+    $('#modal-img').src = d.image || '';
+
+    // Type/Badge
+    $('#modal-badge').innerText = d.type || 'New Project';
+
+    // Area
+    const areaStat = $('#modal-area-stat');
+    if (d.sqft || d.area) {
+        areaStat.classList.remove('hidden');
+        $('#modal-area').innerText = d.sqft ? `${d.sqft} sqft` : d.area;
+    } else {
+        areaStat.classList.add('hidden');
+    }
+
+    // Possession
+    const possStat = $('#modal-possession-stat');
+    if (d.possession) {
+        possStat.classList.remove('hidden');
+        $('#modal-possession').innerText = d.possession;
+    } else {
+        possStat.classList.add('hidden');
+    }
+
+    // RERA
+    const reraStat = $('#modal-rera-stat');
+    if (d.rera) {
+        reraStat.classList.remove('hidden');
+        $('#modal-rera').innerText = d.rera;
+    } else {
+        reraStat.classList.add('hidden');
+    }
+
+    // Amenities
+    const amenitiesSection = $('#modal-amenities-section');
+    const amenitiesContainer = $('#modal-amenities');
+    amenitiesContainer.innerHTML = '';
+
+    if (d.amenities) {
+        amenitiesSection.classList.remove('hidden');
+        d.amenities.split(',').forEach(amenity => {
+            const span = document.createElement('span');
+            span.innerHTML = `<span data-icon="checkCircle" style="display:inline-flex; vertical-align:middle; margin-right:4px;"></span> ${amenity.trim()}`;
+            amenitiesContainer.appendChild(span);
+        });
+    } else {
+        amenitiesSection.classList.add('hidden');
+    }
+
+    // Show modal
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent scroll
+
+    // Reinject icons in modal
+    modal.querySelectorAll('[data-icon]').forEach(el => {
+        const iconName = el.getAttribute('data-icon');
+        if (icons[iconName]) {
+            el.innerHTML = icons[iconName];
+        }
+    });
+}
+
+function closeModal() {
+    const modal = $('#project-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scroll
+    }
+}
+
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', function () {
     // Inject all icons
@@ -231,9 +360,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Setup map link
-    $('.map-link').addEventListener('click', (e) => {
+    $('.map-link')?.addEventListener('click', (e) => {
         e.preventDefault();
         openGoogleMaps();
+    });
+
+    // Setup Modal Close
+    $('#close-modal')?.addEventListener('click', closeModal);
+    $('#project-modal')?.addEventListener('click', (e) => {
+        if (e.target === $('#project-modal')) closeModal();
     });
 
     // Initialize first page

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Home } from 'lucide-react';
+import { ScheduleVisitModal } from './ScheduleVisitModal';
 
 interface HeaderProps {
   currentPage: string;
@@ -9,6 +10,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +69,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button className="hidden md:block px-6 py-2.5 bg-secondary hover:bg-yellow-600 text-white font-medium rounded-full transition-all transform hover:scale-105 shadow-lg">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="hidden md:block px-6 py-2.5 bg-secondary hover:bg-yellow-600 text-white font-medium rounded-full transition-all transform hover:scale-105 shadow-lg"
+          >
             Schedule Visit
           </button>
 
@@ -96,11 +101,20 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               {link.name}
             </button>
           ))}
-          <button className="mt-4 w-full py-3 bg-secondary text-white font-bold rounded-lg shadow-md">
+          <button
+            onClick={() => {
+              setIsModalOpen(true);
+              setIsMobileMenuOpen(false);
+            }}
+            className="mt-4 w-full py-3 bg-secondary text-white font-bold rounded-lg shadow-md"
+          >
             Schedule Visit
           </button>
         </div>
       )}
+
+      {/* Schedule Visit Modal */}
+      <ScheduleVisitModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 };
