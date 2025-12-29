@@ -11,9 +11,9 @@ export const Hero: React.FC = () => {
       {/* Background Image/Video */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/30 z-10" />
-        <img 
-          src="https://picsum.photos/id/1031/1920/1080" 
-          alt="Luxury Real Estate" 
+        <img
+          src="https://picsum.photos/id/1031/1920/1080"
+          alt="Luxury Real Estate"
           className="w-full h-full object-cover"
         />
       </div>
@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
           Exclusive Luxury Living
         </span>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight max-w-4xl shadow-sm">
-          Find Your Dream <br/><span className="text-secondary">Home Today</span>
+          Find Your Dream <br /><span className="text-secondary">Home Today</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl font-light">
           Premium Duplex, Villa & Mansion in Bhubaneswar
@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
                 <MapPin className="text-secondary mr-3" size={20} />
                 <div className="flex flex-col text-left w-full">
                   <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Location</span>
-                  <select 
+                  <select
                     className="bg-transparent text-slate-800 font-semibold focus:outline-none w-full cursor-pointer mt-0.5 appearance-none"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
                 <Home className="text-secondary mr-3" size={20} />
                 <div className="flex flex-col text-left w-full">
                   <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Type</span>
-                  <select 
+                  <select
                     className="bg-transparent text-slate-800 font-semibold focus:outline-none w-full cursor-pointer mt-0.5 appearance-none"
                     value={propertyType}
                     onChange={(e) => setPropertyType(e.target.value)}
@@ -75,17 +75,15 @@ export const Hero: React.FC = () => {
                 <IndianRupee className="text-secondary mr-3" size={20} />
                 <div className="flex flex-col text-left w-full">
                   <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Budget</span>
-                  <select 
+                  <select
                     className="bg-transparent text-slate-800 font-semibold focus:outline-none w-full cursor-pointer mt-0.5 appearance-none"
                     value={budget}
                     onChange={(e) => setBudget(e.target.value)}
                   >
                     <option value="">Budget Range</option>
-                    <option value="60l">₹60 Lakhs</option>
-                    <option value="75l">₹75 Lakhs</option>
-                    <option value="85l">₹85 Lakhs</option>
-                    <option value="1.05cr">₹1.05 Cr</option>
-                    <option value="1.89cr">₹1.89 Cr</option>
+                    <option value="under-75l">Under ₹75 Lakhs</option>
+                    <option value="under-1cr">Under ₹1 Cr</option>
+                    <option value="under-2cr">Under ₹2 Cr</option>
                   </select>
                 </div>
               </div>
