@@ -23,12 +23,11 @@
 
       <nav>
         <button data-page="home">Home</button>
-        <button data-page="home">Buy</button>
         <button data-page="home" data-scroll-to="trending-properties">Projects</button>
         <button data-page="home">Agents</button>
         <button data-page="about">About Us</button>
         <button data-page="contact">Contact</button>
-        <button onclick="openVirtualTour()">360° Virtual Tool</button>
+        <button onclick="openVirtualTour()">360° Virtual Tour</button>
       </nav>
 
       <div style="display: flex; align-items: center; gap: 1rem;">
@@ -39,12 +38,11 @@
 
     <div class="mobile-menu hidden">
       <button data-page="home">Home</button>
-      <button data-page="home">Buy</button>
       <button data-page="home" data-scroll-to="trending-properties">Projects</button>
       <button data-page="home">Agents</button>
       <button data-page="about">About Us</button>
       <button data-page="contact">Contact</button>
-      <button onclick="openVirtualTour()">360° Virtual Tool</button>
+      <button onclick="openVirtualTour()">360° Virtual Tour</button>
       <button class="cta-button">Schedule Visit</button>
     </div>
   </header>
@@ -160,7 +158,10 @@
         </div>
 
         <div class="property-grid">
-          <div class="property-card">
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Paradise"
+            data-price="₹1.05 Cr" data-location="Pahala, Bhubaneswar" data-type="Bungalow" data-beds="5" data-baths="5"
+            data-sqft="2500" data-image="images/property5.jpg"
+            data-amenities="Private Garden,Power Backup,24/7 Security,Clubhouse">
             <div class="property-image">
               <img src="images/property5.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -179,7 +180,10 @@
             </div>
           </div>
 
-          <div class="property-card">
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Vatika Ph-1"
+            data-price="₹85 L" data-location="Gohola Near Pahala, Bhubaneswar" data-type="Duplex" data-beds="3,4"
+            data-baths="5" data-sqft="1800" data-image="images/property4.jpg"
+            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym">
             <div class="property-image">
               <img src="images/property4.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -198,7 +202,10 @@
             </div>
           </div>
 
-          <div class="property-card">
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Avenue"
+            data-price="₹60 Lakhs" data-location="Gohola Near Pahala, Bhubaneswar" data-type="Duplex" data-beds="2,3,4"
+            data-baths="2,3,4" data-sqft="1700" data-image="images/property6.jpg"
+            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom">
             <div class="property-image">
               <img src="images/property6.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -217,7 +224,10 @@
             </div>
           </div>
 
-          <div class="property-card">
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Mansion"
+            data-price="₹1.89 Cr" data-location="Pahala, Gohola, Bhubaneswar" data-type="Bungalow" data-beds="5"
+            data-baths="5" data-sqft="2000" data-image="images/property1.jpg"
+            data-amenities="Lift Service,Multi-purpose Hall,Terrace Garden,Rain Water Harvesting">
             <div class="property-image">
               <img src="images/property1.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -226,7 +236,7 @@
             <div class="property-info">
               <div class="property-type">Bungalow</div>
               <h3 class="property-title">Akshita Mansion</h3>
-              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohala, Bhubaneswar</div>
+              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohola, Bhubaneswar</div>
               <div class="property-features">
                 <div class="property-feature"><span data-icon="bed"></span> 5 BHK</div>
                 <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
@@ -237,7 +247,10 @@
           </div>
 
 
-          <div class="property-card">
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Vatika Ph-2"
+            data-price="₹85 Lakhs" data-location="Pahala, Gohola, Bhubaneswar" data-type="Villa" data-beds="3,4,5"
+            data-baths="3,4,5" data-sqft="1800" data-image="images/property2.jpg"
+            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom">
             <div class="property-image">
               <img src="images/property2.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -246,7 +259,7 @@
             <div class="property-info">
               <div class="property-type">Villa</div>
               <h3 class="property-title">Akshita Vatika Ph-2</h3>
-              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohala, Bhubaneswar</div>
+              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohola, Bhubaneswar</div>
               <div class="property-features">
                 <div class="property-feature"><span data-icon="bed"></span> 3/4/5 BHK</div>
                 <div class="property-feature"><span data-icon="bath"></span> 3/4/5Baths</div>
@@ -256,7 +269,10 @@
             </div>
           </div>
 
-          <div class="property-card">
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Villas"
+            data-price="₹75 Lakhs" data-location="Bhubaneswar" data-type="Duplex" data-beds="3,4" data-baths="3,4"
+            data-sqft="1700" data-image="images/property3.jpg"
+            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym">
             <div class="property-image">
               <img src="images/property3.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -292,8 +308,10 @@
           </div>
 
           <div class="property-grid">
-            <!-- Card 1: Township Plotting (Clickable) -->
-            <div class="property-card" data-page="township" style="cursor: pointer;">
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="Aranya Township"
+              data-price="₹25L - ₹50L" data-location="Khallikote, Ganjam" data-type="Township" data-area="2500 Acres"
+              data-rera="RERA-12345" data-image="images/property11.jpg"
+              data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym,Swimming Pool,RERA Approved">
               <div class="property-image">
                 <img src="images/property11.jpg" alt="Township Plotting">
                 <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
@@ -311,8 +329,10 @@
               </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="property-card">
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="Royal Palms"
+              data-price="₹1.2 Cr - ₹2.5 Cr" data-location="Dhauli, Bhubaneswar" data-type="Luxury Apartments"
+              data-possession="Dec 2026" data-rera="RERA-67890" data-image="images/property8.jpg"
+              data-amenities="Infinity Pool,Garden,Parking,Clubhouse">
               <div class="property-image">
                 <img src="images/property8.jpg" alt="Upcoming Villa">
                 <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
@@ -329,8 +349,10 @@
               </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="property-card">
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="SST Business Park"
+              data-price="₹95L - ₹1.5 Cr" data-location="Patrapada, Bhubaneswar" data-type="Luxury Apartments & Villas"
+              data-possession="Jun 2027" data-rera="RERA-11223" data-image="images/property9.jpg"
+              data-amenities="Business Center,Valet Parking,Security,Gym">
               <div class="property-image">
                 <img src="images/property9.jpg" alt="Commercial Hub">
                 <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
@@ -347,8 +369,10 @@
               </div>
             </div>
 
-            <!-- Card 4 -->
-            <div class="property-card">
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="Sudhansu Enclaves"
+              data-price="₹65L - ₹85L" data-location="Khandagiri, Bhubaneswar" data-type="Apartments"
+              data-possession="Ready to Move" data-rera="RERA-44556" data-image="images/property10.jpg"
+              data-amenities="Temple,Garden,Security,Car Parking">
               <div class="property-image">
                 <img src="images/property10.jpg" alt="Apartment Complex">
                 <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
@@ -1363,6 +1387,54 @@
       </div>
     </div>
   </footer>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-overlay hidden">
+    <div class="modal-container">
+      <button class="modal-close" id="close-modal">
+        <span data-icon="x"></span>
+      </button>
+      <div class="modal-content">
+        <div class="modal-image">
+          <img id="modal-img" src="" alt="Project Image">
+        </div>
+        <div class="modal-details">
+          <span id="modal-badge" class="section-badge">New Launch</span>
+          <h2 id="modal-title" class="font-serif"></h2>
+          <div class="modal-location">
+            <span data-icon="mapPin"></span>
+            <span id="modal-loc-text"></span>
+          </div>
+          <div class="modal-stats-grid">
+            <div class="modal-stat">
+              <p class="stat-label">Price</p>
+              <p id="modal-price" class="stat-value"></p>
+            </div>
+            <div class="modal-stat" id="modal-area-stat">
+              <p class="stat-label">Area</p>
+              <p id="modal-area" class="stat-value"></p>
+            </div>
+            <div class="modal-stat" id="modal-possession-stat">
+              <p class="stat-label">Possession</p>
+              <p id="modal-possession" class="stat-value"></p>
+            </div>
+            <div class="modal-stat" id="modal-rera-stat">
+              <p class="stat-label">RERA ID</p>
+              <p id="modal-rera" class="stat-value"></p>
+            </div>
+          </div>
+          <div id="modal-amenities-section">
+            <p class="section-label">Amenities</p>
+            <div id="modal-amenities" class="modal-tags"></div>
+          </div>
+          <div class="modal-actions">
+            <button class="primary-btn">Download Brochure</button>
+            <button class="secondary-btn">Request Callback</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
