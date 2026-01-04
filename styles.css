@@ -121,6 +121,62 @@ a {
   animation: marqueeReverse 30s linear infinite;
 }
 
+/* Modal Animations */
+.animate-fade-in {
+  animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in-from-top-5 {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* ===== HEADER ===== */
 header {
   position: fixed;
@@ -3020,4 +3076,55 @@ footer {
   .schedule-modal-form .form-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+/* Z-Index and Positioning Utilities for Modals */
+.z-10 {
+  z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-\[9999\] {
+  z-index: 9999;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* ===== VISUAL PROPERTY FILTERING ===== */
+.property-card-dimmed {
+  opacity: 0.35 !important;
+  filter: grayscale(60%);
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.property-card-dimmed:hover {
+  transform: none !important;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.property-card-highlighted {
+  box-shadow: 0 0 0 3px rgba(202, 138, 4, 0.3), 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+}
+
+.property-card-highlighted:hover {
+  box-shadow: 0 0 0 3px rgba(202, 138, 4, 0.5), 0 30px 60px rgba(0, 0, 0, 0.2) !important;
+}
+
+.scroll-mt-20 {
+  scroll-margin-top: 5rem;
 }

@@ -65,10 +65,10 @@
               <span data-icon="mapPin"></span>
               <div class="search-field-content">
                 <span class="search-field-label">Location</span>
-                <select id="search-location">
-                  <option value="">Select Location</option>
-                  <option value="Pahala">Pahala</option>
-                  <option value="Gohala">Gohala</option>
+                <select>
+                  <option>Select Location</option>
+                  <option>Pahala</option>
+                  <option>Gohala</option>
                 </select>
               </div>
             </div>
@@ -76,11 +76,11 @@
               <span data-icon="home"></span>
               <div class="search-field-content">
                 <span class="search-field-label">Type</span>
-                <select id="search-type">
-                  <option value="">Property Type</option>
-                  <option value="Duplex">Duplex</option>
-                  <option value="Villa">Villa</option>
-                  <option value="Mansion">Mansion</option>
+                <select>
+                  <option>Property Type</option>
+                  <option>Duplex</option>
+                  <option>Villa</option>
+                  <option>Mansion</option>
                 </select>
               </div>
             </div>
@@ -88,20 +88,20 @@
               <span data-icon="indianRupee"></span>
               <div class="search-field-content">
                 <span class="search-field-label">Budget</span>
-                <select id="search-budget">
-                  <option value="">Budget Range</option>
-                  <option value="under-75l">Under ₹75 Lakhs</option>
-                  <option value="under-1cr">Under ₹1 Cr</option>
-                  <option value="under-2cr">Under ₹2 Cr</option>
+                <select>
+                  <option>Budget Range</option>
+                  <option>Under ₹75 Lakhs</option>
+                  <option>Under ₹1 Cr</option>
+                  <option>Under ₹2 Cr</option>
                 </select>
               </div>
             </div>
-            <button class="search-button" id="search-btn"><span data-icon="search"></span><span>Search</span></button>
+            <button class="search-button"><span data-icon="search"></span><span>Search</span></button>
           </div>
         </div>
 
         <div class="hero-cta">
-          <button class="primary-btn" data-page="home" data-scroll-to="trending-properties">View Properties</button>
+          <button class="primary-btn">View Properties</button>
           <button class="secondary-btn" onclick="openScheduleVisitModal()">Schedule Site Visit</button>
         </div>
       </div>
@@ -110,8 +110,7 @@
     <!-- CATEGORIES -->
     <section class="bg-white">
       <div class="container">
-        <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 3rem;">Our Completed Projects
-        </h2>
+        <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 3rem;">Browse By Category</h2>
         <div class="category-grid">
           <div class="category-card">
             <div class="category-icon" data-icon="building"></div>
@@ -160,7 +159,7 @@
           <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Paradise"
             data-price="₹1.05 Cr" data-location="Pahala, Bhubaneswar" data-type="Bungalow" data-beds="5" data-baths="5"
             data-sqft="2500" data-image="images/property5.jpg"
-            data-amenities="Private Garden,Power Backup,24/7 Security,Clubhouse" data-brochure="Brouchers/1.pdf">
+            data-amenities="Private Garden,Power Backup,24/7 Security,Clubhouse">
             <div class="property-image">
               <img src="images/property5.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -180,18 +179,18 @@
           </div>
 
           <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Vatika Ph-1"
-            data-price="₹85 Lakhs" data-location="Pahala, Bhubaneswar" data-type="Duplex" data-beds="3,4" data-baths="5"
-            data-sqft="1800" data-image="images/property4.jpg"
-            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym" data-brochure="Brouchers/2.pdf">
+            data-price="₹85 L" data-location="Gohola Near Pahala, Bhubaneswar" data-type="Duplex" data-beds="3,4"
+            data-baths="5" data-sqft="1800" data-image="images/property4.jpg"
+            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym">
             <div class="property-image">
               <img src="images/property4.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
-              <div class="property-price">₹85 Lakhs</div>
+              <div class="property-price">₹85 L</div>
             </div>
             <div class="property-info">
               <div class="property-type">Duplex</div>
               <h3 class="property-title">Akshita Vatika Ph-1</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Pahala, Bhubaneswar</div>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohola Near Pahala, Bhubaneswar</div>
               <div class="property-features">
                 <div class="property-feature"><span data-icon="bed"></span> 3,4 BHK</div>
                 <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
@@ -202,9 +201,9 @@
           </div>
 
           <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Avenue"
-            data-price="₹60 Lakhs" data-location="Pahala, Bhubaneswar" data-type="Duplex" data-beds="2,3,4"
+            data-price="₹60 Lakhs" data-location="Gohola Near Pahala, Bhubaneswar" data-type="Duplex" data-beds="2,3,4"
             data-baths="2,3,4" data-sqft="1700" data-image="images/property6.jpg"
-            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom" data-brochure="Brouchers/3.pdf">
+            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom">
             <div class="property-image">
               <img src="images/property6.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -213,7 +212,7 @@
             <div class="property-info">
               <div class="property-type">Duplex</div>
               <h3 class="property-title">Akshita Avenue</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Pahala, Bhubaneswar</div>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohola Near Pahala, Bhubaneswar</div>
               <div class="property-features">
                 <div class="property-feature"><span data-icon="bed"></span> 2,3,4 Beds</div>
                 <div class="property-feature"><span data-icon="bath"></span> 2,3,4 Baths</div>
@@ -224,19 +223,18 @@
           </div>
 
           <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Mansion"
-            data-price="₹1.89 Cr" data-location="Gohala, Bhubaneswar" data-type="Mansion" data-beds="5" data-baths="5"
-            data-sqft="2000" data-image="images/property1.jpg"
-            data-amenities="Lift Service,Multi-purpose Hall,Terrace Garden,Rain Water Harvesting"
-            data-brochure="Brouchers/4.pdf">
+            data-price="₹1.89 Cr" data-location="Pahala, Gohola, Bhubaneswar" data-type="Bungalow" data-beds="5"
+            data-baths="5" data-sqft="2000" data-image="images/property1.jpg"
+            data-amenities="Lift Service,Multi-purpose Hall,Terrace Garden,Rain Water Harvesting">
             <div class="property-image">
               <img src="images/property1.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
               <div class="property-price">₹1.89 Cr</div>
             </div>
             <div class="property-info">
-              <div class="property-type">Mansion</div>
+              <div class="property-type">Bungalow</div>
               <h3 class="property-title">Akshita Mansion</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Gohala, Bhubaneswar</div>
+              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohola, Bhubaneswar</div>
               <div class="property-features">
                 <div class="property-feature"><span data-icon="bed"></span> 5 BHK</div>
                 <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
@@ -248,9 +246,9 @@
 
 
           <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Vatika Ph-2"
-            data-price="₹85 Lakhs" data-location="Pahala, Bhubaneswar" data-type="Villa" data-beds="3,4,5"
+            data-price="₹85 Lakhs" data-location="Pahala, Gohola, Bhubaneswar" data-type="Villa" data-beds="3,4,5"
             data-baths="3,4,5" data-sqft="1800" data-image="images/property2.jpg"
-            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom" data-brochure="Brouchers/5.pdf">
+            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom">
             <div class="property-image">
               <img src="images/property2.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -259,7 +257,7 @@
             <div class="property-info">
               <div class="property-type">Villa</div>
               <h3 class="property-title">Akshita Vatika Ph-2</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Pahala, Bhubaneswar</div>
+              <div class="property-location"><span data-icon="mapPin"></span> Pahala, Gohola, Bhubaneswar</div>
               <div class="property-features">
                 <div class="property-feature"><span data-icon="bed"></span> 3/4/5 BHK</div>
                 <div class="property-feature"><span data-icon="bath"></span> 3/4/5Baths</div>
@@ -270,9 +268,9 @@
           </div>
 
           <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Villas"
-            data-price="₹75 Lakhs" data-location="Gohala, Bhubaneswar" data-type="Duplex" data-beds="3,4"
-            data-baths="3,4" data-sqft="1700" data-image="images/property3.jpg"
-            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym" data-brochure="Brouchers/6.pdf">
+            data-price="₹75 Lakhs" data-location="Bhubaneswar" data-type="Duplex" data-beds="3,4" data-baths="3,4"
+            data-sqft="1700" data-image="images/property3.jpg"
+            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym">
             <div class="property-image">
               <img src="images/property3.jpg" alt="Property">
               <div class="property-badge">For Sale</div>
@@ -281,7 +279,7 @@
             <div class="property-info">
               <div class="property-type">Duplex</div>
               <h3 class="property-title">Akshita Villas</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Gohala, Bhubaneswar</div>
+              <div class="property-location"><span data-icon="mapPin"></span> Bhubaneswar</div>
               <div class="property-features">
                 <div class="property-feature"><span data-icon="bed"></span> 3/4 BHK</div>
                 <div class="property-feature"><span data-icon="bath"></span> 3/4 Baths</div>
@@ -293,542 +291,540 @@
         </div>
       </div>
 
-    </section>
-
-    <!-- UPCOMING PROJECTS -->
-    <section class="bg-white" id="upcoming-projects">
-      <div class="container">
-        <div
-          style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <h2 class="section-title font-serif">Upcoming Projects</h2>
-            <p class="section-subtitle">Exclusive previews of our future landmarks.</p>
-          </div>
-          <button
-            style="display: flex; align-items: center; color: var(--secondary); font-weight: 700; background: none;">View
-            All Projects <span data-icon="arrowRight" style="margin-left: 0.5rem;"></span></button>
-        </div>
-
-        <div class="property-grid">
-          <div class="property-card" onclick="showProjectDetails(this)" data-title="Aranya Township"
-            data-price="₹25L - ₹50L" data-location="Khallikote, Ganjam" data-type="Township" data-area="2500 Acres"
-            data-rera="RERA-12345" data-image="images/property11.jpg"
-            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym,Swimming Pool,RERA Approved">
-            <div class="property-image">
-              <img src="images/property11.jpg" alt="Township Plotting">
-              <div class="property-badge" style="background: #dc2626;">Registration Open</div>
-            </div>
-            <div class="property-info">
-              <div class="property-type">Township</div>
-              <h3 class="property-title">Aranya Township</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Khallikote, Ganjam</div>
-              <div class="property-features">
-                <div class="property-feature"><span data-icon="landPlot"></span> 2500 Acres</div>
-                <div class="property-feature"><span data-icon="shieldCheck"></span> RERA Approved</div>
-              </div>
-              <button class="property-button" style="background: var(--secondary); color: white; border: none;">View
-                Details</button>
-            </div>
-          </div>
-
-          <div class="property-card" onclick="showProjectDetails(this)" data-title="Royal Palms"
-            data-price="₹1.2 Cr - ₹2.5 Cr" data-location="Dhauli, Bhubaneswar" data-type="Luxury Apartments"
-            data-possession="Dec 2026" data-rera="RERA-67890" data-image="images/property8.jpg"
-            data-amenities="Infinity Pool,Garden,Parking,Clubhouse">
-            <div class="property-image">
-              <img src="images/property8.jpg" alt="Upcoming Villa">
-              <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
-            </div>
-            <div class="property-info">
-              <div class="property-type">Luxury Apartments</div>
-              <h3 class="property-title">Royal Palms</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Dhauli, Bhubaneswar</div>
-              <div class="property-features">
-                <div class="property-feature"><span data-icon="bed"></span> 4,5 BHK</div>
-                <div class="property-feature"><span data-icon="move"></span> 3500 sqft</div>
-              </div>
-              <button class="property-button">Notify Me</button>
-            </div>
-          </div>
-
-          <div class="property-card" onclick="showProjectDetails(this)" data-title="SST Business Park"
-            data-price="₹95L - ₹1.5 Cr" data-location="Patrapada, Bhubaneswar" data-type="Luxury Apartments & Villas"
-            data-possession="Jun 2027" data-rera="RERA-11223" data-image="images/property9.jpg"
-            data-amenities="Business Center,Valet Parking,Security,Gym">
-            <div class="property-image">
-              <img src="images/property9.jpg" alt="Commercial Hub">
-              <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
-            </div>
-            <div class="property-info">
-              <div class="property-type">Luxury Apartments & Villas</div>
-              <h3 class="property-title">SST Business Park</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Patrapada, Bhubaneswar</div>
-              <div class="property-features">
-                <div class="property-feature"><span data-icon="building"></span> 4 BHK</div>
-                <div class="property-feature"><span data-icon="move"></span> 500-2000 sqft</div>
-              </div>
-              <button class="property-button">Notify Me</button>
-            </div>
-          </div>
-
-          <div class="property-card" onclick="showProjectDetails(this)" data-title="Sudhansu Enclaves"
-            data-price="₹65L - ₹85L" data-location="Khandagiri, Bhubaneswar" data-type="Apartments"
-            data-possession="Ready to Move" data-rera="RERA-44556" data-image="images/property10.jpg"
-            data-amenities="Temple,Garden,Security,Car Parking">
-            <div class="property-image">
-              <img src="images/property10.jpg" alt="Apartment Complex">
-              <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
-            </div>
-            <div class="property-info">
-              <div class="property-type">Apartments</div>
-              <h3 class="property-title">Sudhansu Enclaves</h3>
-              <div class="property-location"><span data-icon="mapPin"></span>Khandagiri, Bhubaneswar</div>
-              <div class="property-features">
-                <div class="property-feature"><span data-icon="bed"></span> 2,3 BHK</div>
-                <div class="property-feature"><span data-icon="move"></span> 1200-1600 sqft</div>
-              </div>
-              <button class="property-button">Notify Me</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT US -->
-    <section class="bg-white">
-      <div class="container">
-        <div class="about-section">
-          <div class="about-image">
-            <img src="https://picsum.photos/id/101/600/700" alt="About Us">
-            <div class="stats-badge hidden" style="display: none;">
-              <p>10+</p>
-              <p>Years of Experience</p>
-            </div>
-          </div>
-          <div class="about-content">
-            <span class="section-badge">Our Story</span>
-            <h2 class="section-title font-serif">10 Years of Building <br>Trusted Homes</h2>
-            <p style="color: var(--slate-600); font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
-              At SSTDevelopers, we believe home is more than just a place to live—it's where memories are made. With a
-              decade of experience, we have successfully delivered trusted, high-quality, and legally verified
-              properties to thousands of families.
-            </p>
-            <div class="stats-grid">
-              <div class="stat-card">
-                <p>1200+</p>
-                <p>Happy Families</p>
-              </div>
-              <div class="stat-card">
-                <p>20+</p>
-                <p>Completed Projects</p>
-              </div>
-              <div class="stat-card">
-                <p>100%</p>
-                <p>RERA Approved</p>
-              </div>
+      <!-- UPCOMING PROJECTS -->
+      <section class="bg-white" id="upcoming-projects">
+        <div class="container">
+          <div
+            style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h2 class="section-title font-serif">Upcoming Projects</h2>
+              <p class="section-subtitle">Exclusive previews of our future landmarks.</p>
             </div>
             <button
-              style="margin-top: 2rem; padding: 0.75rem 2rem; background: var(--primary); color: var(--white); font-weight: 700; border-radius: 9999px; box-shadow: 0 10px 15px rgba(0,0,0,0.1);">Learn
-              More About Us</button>
+              style="display: flex; align-items: center; color: var(--secondary); font-weight: 700; background: none;">View
+              All Projects <span data-icon="arrowRight" style="margin-left: 0.5rem;"></span></button>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="bg-slate-50">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title font-serif">Why Choose SSTDevelopers?</h2>
-          <p class="section-subtitle">We simplify the home buying journey with trust and transparency.</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon" data-icon="shieldCheck"></div>
-            <h3>RERA Registered</h3>
-            <p>All projects are RERA compliant for your peace of mind.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" data-icon="checkCircle"></div>
-            <h3>100% Verified</h3>
-            <p>Thorough legal checks on every property listing.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" data-icon="indianRupee"></div>
-            <h3>Zero Brokerage</h3>
-            <p>Direct from developers, no hidden charges.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" data-icon="headset"></div>
-            <h3>24/7 Support</h3>
-            <p>Dedicated relationship managers for every query.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon" data-icon="fileCheck"></div>
-            <h3>Transparent Pricing</h3>
-            <p>No hidden costs, what you see is what you pay.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="bg-white">
-      <div class="container">
-        <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 4rem;">What Our Clients Say
-        </h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <span class="quote-icon" data-icon="quote"></span>
-            <div class="testimonial-header">
-              <img src="https://picsum.photos/id/64/100/100" alt="Client" class="testimonial-avatar">
-              <div class="testimonial-author">
-                <h4>Raja Laxmi Panda</h4>
-                <span>Bhubaneswar, Odisha</span>
+          <div class="property-grid">
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="Aranya Township"
+              data-price="₹25L - ₹50L" data-location="Khallikote, Ganjam" data-type="Township" data-area="2500 Acres"
+              data-rera="RERA-12345" data-image="images/property11.jpg"
+              data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym,Swimming Pool,RERA Approved">
+              <div class="property-image">
+                <img src="images/property11.jpg" alt="Township Plotting">
+                <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+              </div>
+              <div class="property-info">
+                <div class="property-type">Township</div>
+                <h3 class="property-title">Aranya Township</h3>
+                <div class="property-location"><span data-icon="mapPin"></span>Khallikote, Ganjam</div>
+                <div class="property-features">
+                  <div class="property-feature"><span data-icon="landPlot"></span> 2500 Acres</div>
+                  <div class="property-feature"><span data-icon="shieldCheck"></span> RERA Approved</div>
+                </div>
+                <button class="property-button" style="background: var(--secondary); color: white; border: none;">View
+                  Details</button>
               </div>
             </div>
-            <p class="testimonial-text">"Finding our dream villa was seamless with SSTDevelopers. The transparency and
-              professionalism were unmatched."</p>
-            <div class="testimonial-stars">
-              <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
-                data-icon="star"></span><span data-icon="star"></span>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <span class="quote-icon" data-icon="quote"></span>
-            <div class="testimonial-header">
-              <img src="https://picsum.photos/id/91/100/100" alt="Client" class="testimonial-avatar">
-              <div class="testimonial-author">
-                <h4>Pratyush Kumar</h4>
-                <span>Bhubaneswar, Odisha</span>
+
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="Royal Palms"
+              data-price="₹1.2 Cr - ₹2.5 Cr" data-location="Dhauli, Bhubaneswar" data-type="Luxury Apartments"
+              data-possession="Dec 2026" data-rera="RERA-67890" data-image="images/property8.jpg"
+              data-amenities="Infinity Pool,Garden,Parking,Clubhouse">
+              <div class="property-image">
+                <img src="images/property8.jpg" alt="Upcoming Villa">
+                <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+              </div>
+              <div class="property-info">
+                <div class="property-type">Luxury Apartments</div>
+                <h3 class="property-title">Royal Palms</h3>
+                <div class="property-location"><span data-icon="mapPin"></span>Dhauli, Bhubaneswar</div>
+                <div class="property-features">
+                  <div class="property-feature"><span data-icon="bed"></span> 4,5 BHK</div>
+                  <div class="property-feature"><span data-icon="move"></span> 3500 sqft</div>
+                </div>
+                <button class="property-button">Notify Me</button>
               </div>
             </div>
-            <p class="testimonial-text">"They helped me find the perfect commercial space for my startup. Excellent
-              support throughout the legal process."</p>
-            <div class="testimonial-stars">
-              <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
-                data-icon="star"></span><span data-icon="star"></span>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <span class="quote-icon" data-icon="quote"></span>
-            <div class="testimonial-header">
-              <img src="https://picsum.photos/id/129/100/100" alt="Client" class="testimonial-avatar">
-              <div class="testimonial-author">
-                <h4>Bhagyadhar Bisoi</h4>
-                <span>Bhubaneswar, Odisha</span>
+
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="SST Business Park"
+              data-price="₹95L - ₹1.5 Cr" data-location="Patrapada, Bhubaneswar" data-type="Luxury Apartments & Villas"
+              data-possession="Jun 2027" data-rera="RERA-11223" data-image="images/property9.jpg"
+              data-amenities="Business Center,Valet Parking,Security,Gym">
+              <div class="property-image">
+                <img src="images/property9.jpg" alt="Commercial Hub">
+                <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+              </div>
+              <div class="property-info">
+                <div class="property-type">Luxury Apartments & Villas</div>
+                <h3 class="property-title">SST Business Park</h3>
+                <div class="property-location"><span data-icon="mapPin"></span>Patrapada, Bhubaneswar</div>
+                <div class="property-features">
+                  <div class="property-feature"><span data-icon="building"></span> 4 BHK</div>
+                  <div class="property-feature"><span data-icon="move"></span> 500-2000 sqft</div>
+                </div>
+                <button class="property-button">Notify Me</button>
               </div>
             </div>
-            <p class="testimonial-text">"I loved the virtual tour features. It saved us so much time. Highly recommend
-              their verified listings."</p>
-            <div class="testimonial-stars">
-              <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
-                data-icon="star"></span><span data-icon="star"></span>
+
+            <div class="property-card" onclick="showProjectDetails(this)" data-title="Sudhansu Enclaves"
+              data-price="₹65L - ₹85L" data-location="Khandagiri, Bhubaneswar" data-type="Apartments"
+              data-possession="Ready to Move" data-rera="RERA-44556" data-image="images/property10.jpg"
+              data-amenities="Temple,Garden,Security,Car Parking">
+              <div class="property-image">
+                <img src="images/property10.jpg" alt="Apartment Complex">
+                <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+              </div>
+              <div class="property-info">
+                <div class="property-type">Apartments</div>
+                <h3 class="property-title">Sudhansu Enclaves</h3>
+                <div class="property-location"><span data-icon="mapPin"></span>Khandagiri, Bhubaneswar</div>
+                <div class="property-features">
+                  <div class="property-feature"><span data-icon="bed"></span> 2,3 BHK</div>
+                  <div class="property-feature"><span data-icon="move"></span> 1200-1600 sqft</div>
+                </div>
+                <button class="property-button">Notify Me</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-
-    <!-- GALLERY OF EVENTS -->
-    <section class="gallery-section">
-      <div class="container">
-        <div class="gallery-title">
-          <h2 class="font-serif">Our Gallery of Events</h2>
-          <div class="divider"></div>
-          <p>A glimpse of our bond with trust</p>
-        </div>
-      </div>
-
-      <div class="marquee-container">
-        <div class="marquee-fade-left"></div>
-        <div class="marquee-fade-right"></div>
-
-        <div class="marquee-track animate-marquee">
-          <div class="marquee-item">
-            <img src="images/event1.jpg" alt="Team Meeting">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Team Meeting & Planning</span>
+      <!-- ABOUT US -->
+      <section class="bg-white">
+        <div class="container">
+          <div class="about-section">
+            <div class="about-image">
+              <img src="https://picsum.photos/id/101/600/700" alt="About Us">
+              <div class="stats-badge hidden" style="display: none;">
+                <p>10+</p>
+                <p>Years of Experience</p>
+              </div>
             </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event2.jpg" alt="10 Years Celebration">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Celebrating 10 Years of Excellence</span>
-            </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event3.jpg" alt="Client Event">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Client Appreciation Event</span>
-            </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event4.jpg" alt="Project Launch">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>New Project Launch</span>
-            </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event5.jpg" alt="Award Ceremony">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Award Ceremony</span>
-            </div>
-          </div>
-
-          <!-- Duplicate for seamless loop -->
-          <div class="marquee-item">
-            <img src="images/event1.jpg" alt="Team Meeting">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Team Meeting & Planning</span>
-            </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event2.jpg" alt="10 Years Celebration">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Celebrating 10 Years of Excellence</span>
-            </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event3.jpg" alt="Client Event">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Client Appreciation Event</span>
-            </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event4.jpg" alt="Project Launch">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>New Project Launch</span>
-            </div>
-          </div>
-          <div class="marquee-item">
-            <img src="images/event5.jpg" alt="Award Ceremony">
-            <div class="marquee-overlay"></div>
-            <div class="marquee-caption">
-              <span>Award Ceremony</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- OUR PARTNERS -->
-    <section class="partners-section">
-      <div class="container">
-        <div class="partners-header">
-          <span class="partners-badge">Trusted By</span>
-          <h2 class="font-serif">Our Banking Partners</h2>
-          <div class="partners-divider"></div>
-          <p class="partners-subtitle">Collaborating with India's leading financial institutions to make your home
-            loan
-            process seamless</p>
-        </div>
-
-        <div class="partners-grid">
-          <div class="partner-card">
-            <div class="partner-logo-container">
-              <img src="images/partner1.png" alt="ICICI Bank" class="partner-logo">
-            </div>
-            <div class="partner-info">
-              <h4>ICICI Bank</h4>
-              <p>Competitive interest rates</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <div class="partner-logo-container">
-              <img src="images/partner2.png" alt="Indian Bank" class="partner-logo">
-            </div>
-            <div class="partner-info">
-              <h4>Indian Bank</h4>
-              <p>Quick loan approvals</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <div class="partner-logo-container">
-              <img src="images/partner3.png" alt="Indian Overseas Bank" class="partner-logo">
-            </div>
-            <div class="partner-info">
-              <h4>Indian Overseas Bank</h4>
-              <p>Flexible repayment options</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <div class="partner-logo-container">
-              <img src="images/partner4.png" alt="LIC Housing Finance" class="partner-logo">
-            </div>
-            <div class="partner-info">
-              <h4>LIC Housing Finance</h4>
-              <p>Trusted since 1989</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <div class="partner-logo-container">
-              <img src="images/partner5.png" alt="Punjab & Sind Bank" class="partner-logo">
-            </div>
-            <div class="partner-info">
-              <h4>Punjab & Sind Bank</h4>
-              <p>Personalized service</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="partners-cta">
-          <p>Need help with home loan assistance?</p>
-          <button class="partners-cta-button">
-            <span>Get Expert Guidance</span>
-            <span data-icon="arrowRight"></span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="bg-slate-50">
-      <div class="container">
-        <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 3rem;">Frequently Asked
-          Questions
-        </h2>
-        <div class="faq-container">
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Do you provide home loan assistance?</span>
-              <span data-icon="chevronDown"></span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, we have tie-ups with all major banks to help you get the best interest rates and quick
-                approvals.
+            <div class="about-content">
+              <span class="section-badge">Our Story</span>
+              <h2 class="section-title font-serif">10 Years of Building <br>Trusted Homes</h2>
+              <p style="color: var(--slate-600); font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                At SSTDevelopers, we believe home is more than just a place to live—it's where memories are made. With a
+                decade of experience, we have successfully delivered trusted, high-quality, and legally verified
+                properties to thousands of families.
               </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>How does the registration process work?</span>
-              <span data-icon="chevronDown"></span>
-            </button>
-            <div class="faq-answer">
-              <p>Our legal team handles all documentation, verification, and registration procedures to ensure a
-                hassle-free experience.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Can I schedule a site visit on weekends?</span>
-              <span data-icon="chevronDown"></span>
-            </button>
-            <div class="faq-answer">
-              <p>Absolutely! We arrange site visits 7 days a week. You can also opt for our cab pick-up service.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Is there any cancellation fee?</span>
-              <span data-icon="chevronDown"></span>
-            </button>
-            <div class="faq-answer">
-              <p>Cancellation policies vary by project. Generally, a nominal administrative fee is deducted if
-                cancelled
-                before the agreement.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Do you provide interior design services?</span>
-              <span data-icon="chevronDown"></span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, we offer premium interior design packages for our villas and apartments to help you move in
-                hassle-free.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>What are the maintenance charges?</span>
-              <span data-icon="chevronDown"></span>
-            </button>
-            <div class="faq-answer">
-              <p>Maintenance charges are decided by the Residents' Welfare Association (RWA) upon handover, usually
-                based
-                on
-                per sqft area.</p>
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <p>1200+</p>
+                  <p>Happy Families</p>
+                </div>
+                <div class="stat-card">
+                  <p>20+</p>
+                  <p>Completed Projects</p>
+                </div>
+                <div class="stat-card">
+                  <p>100%</p>
+                  <p>RERA Approved</p>
+                </div>
+              </div>
+              <button
+                style="margin-top: 2rem; padding: 0.75rem 2rem; background: var(--primary); color: var(--white); font-weight: 700; border-radius: 9999px; box-shadow: 0 10px 15px rgba(0,0,0,0.1);">Learn
+                More About Us</button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT FORM -->
-    <section class="bg-white">
-      <div class="container">
-        <div class="contact-section">
-          <div class="contact-info">
-            <h2 class="font-serif">Let's Discuss Your Dream Home</h2>
-            <p>Fill out the form and our premium property consultants will get in touch with you shortly.</p>
-            <div class="contact-steps">
-              <div class="contact-step">
-                <div class="step-number">1</div>
-                <p>Schedule a free consultation</p>
+      <!-- WHY CHOOSE US -->
+      <section class="bg-slate-50">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title font-serif">Why Choose SSTDevelopers?</h2>
+            <p class="section-subtitle">We simplify the home buying journey with trust and transparency.</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon" data-icon="shieldCheck"></div>
+              <h3>RERA Registered</h3>
+              <p>All projects are RERA compliant for your peace of mind.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon" data-icon="checkCircle"></div>
+              <h3>100% Verified</h3>
+              <p>Thorough legal checks on every property listing.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon" data-icon="indianRupee"></div>
+              <h3>Zero Brokerage</h3>
+              <p>Direct from developers, no hidden charges.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon" data-icon="headset"></div>
+              <h3>24/7 Support</h3>
+              <p>Dedicated relationship managers for every query.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon" data-icon="fileCheck"></div>
+              <h3>Transparent Pricing</h3>
+              <p>No hidden costs, what you see is what you pay.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="bg-white">
+        <div class="container">
+          <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 4rem;">What Our Clients Say
+          </h2>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <span class="quote-icon" data-icon="quote"></span>
+              <div class="testimonial-header">
+                <img src="https://picsum.photos/id/64/100/100" alt="Client" class="testimonial-avatar">
+                <div class="testimonial-author">
+                  <h4>Raja Laxmi Panda</h4>
+                  <span>Bhubaneswar, Odisha</span>
+                </div>
               </div>
-              <div class="contact-step">
-                <div class="step-number">2</div>
-                <p>Visit properties with our experts</p>
+              <p class="testimonial-text">"Finding our dream villa was seamless with SSTDevelopers. The transparency and
+                professionalism were unmatched."</p>
+              <div class="testimonial-stars">
+                <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
+                  data-icon="star"></span><span data-icon="star"></span>
               </div>
-              <div class="contact-step">
-                <div class="step-number">3</div>
-                <p>Secure your home with zero hassle</p>
+            </div>
+            <div class="testimonial-card">
+              <span class="quote-icon" data-icon="quote"></span>
+              <div class="testimonial-header">
+                <img src="https://picsum.photos/id/91/100/100" alt="Client" class="testimonial-avatar">
+                <div class="testimonial-author">
+                  <h4>Pratyush Kumar</h4>
+                  <span>Bhubaneswar, Odisha</span>
+                </div>
+              </div>
+              <p class="testimonial-text">"They helped me find the perfect commercial space for my startup. Excellent
+                support throughout the legal process."</p>
+              <div class="testimonial-stars">
+                <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
+                  data-icon="star"></span><span data-icon="star"></span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <span class="quote-icon" data-icon="quote"></span>
+              <div class="testimonial-header">
+                <img src="https://picsum.photos/id/129/100/100" alt="Client" class="testimonial-avatar">
+                <div class="testimonial-author">
+                  <h4>Bhagyadhar Bisoi</h4>
+                  <span>Bhubaneswar, Odisha</span>
+                </div>
+              </div>
+              <p class="testimonial-text">"I loved the virtual tour features. It saved us so much time. Highly recommend
+                their verified listings."</p>
+              <div class="testimonial-stars">
+                <span data-icon="star"></span><span data-icon="star"></span><span data-icon="star"></span><span
+                  data-icon="star"></span><span data-icon="star"></span>
               </div>
             </div>
           </div>
-          <div class="contact-form-container">
-            <h3>Request a Callback</h3>
-            <form id="contact-form">
-              <div class="form-group">
-                <label>Name</label>
-                <input type="text" placeholder="Uma Shankar" required>
-              </div>
-              <div class="form-grid">
-                <div class="form-group">
-                  <label>Phone</label>
-                  <input type="tel" placeholder="+91 0000-0000-00" required>
-                </div>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="email" placeholder="john@example.com" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Property Interest</label>
-                <select>
-                  <option>Duplex</option>
-                  <option>Villa</option>
-                  <option>Mansion</option>
-                  <option>Plot</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Message</label>
-                <textarea placeholder="Tell us about your requirements..."></textarea>
-              </div>
-              <button type="submit" class="submit-button">Request Callback <span data-icon="send"></span></button>
-            </form>
+        </div>
+      </section>
+
+
+
+      <!-- GALLERY OF EVENTS -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="gallery-title">
+            <h2 class="font-serif">Our Gallery of Events</h2>
+            <div class="divider"></div>
+            <p>A glimpse of our bond with trust</p>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div class="marquee-container">
+          <div class="marquee-fade-left"></div>
+          <div class="marquee-fade-right"></div>
+
+          <div class="marquee-track animate-marquee">
+            <div class="marquee-item">
+              <img src="images/event1.jpg" alt="Team Meeting">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Team Meeting & Planning</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event2.jpg" alt="10 Years Celebration">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Celebrating 10 Years of Excellence</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event3.jpg" alt="Client Event">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Client Appreciation Event</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event4.jpg" alt="Project Launch">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>New Project Launch</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event5.jpg" alt="Award Ceremony">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Award Ceremony</span>
+              </div>
+            </div>
+
+            <!-- Duplicate for seamless loop -->
+            <div class="marquee-item">
+              <img src="images/event1.jpg" alt="Team Meeting">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Team Meeting & Planning</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event2.jpg" alt="10 Years Celebration">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Celebrating 10 Years of Excellence</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event3.jpg" alt="Client Event">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Client Appreciation Event</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event4.jpg" alt="Project Launch">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>New Project Launch</span>
+              </div>
+            </div>
+            <div class="marquee-item">
+              <img src="images/event5.jpg" alt="Award Ceremony">
+              <div class="marquee-overlay"></div>
+              <div class="marquee-caption">
+                <span>Award Ceremony</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- OUR PARTNERS -->
+      <section class="partners-section">
+        <div class="container">
+          <div class="partners-header">
+            <span class="partners-badge">Trusted By</span>
+            <h2 class="font-serif">Our Banking Partners</h2>
+            <div class="partners-divider"></div>
+            <p class="partners-subtitle">Collaborating with India's leading financial institutions to make your home
+              loan
+              process seamless</p>
+          </div>
+
+          <div class="partners-grid">
+            <div class="partner-card">
+              <div class="partner-logo-container">
+                <img src="images/partner1.png" alt="ICICI Bank" class="partner-logo">
+              </div>
+              <div class="partner-info">
+                <h4>ICICI Bank</h4>
+                <p>Competitive interest rates</p>
+              </div>
+            </div>
+
+            <div class="partner-card">
+              <div class="partner-logo-container">
+                <img src="images/partner2.png" alt="Indian Bank" class="partner-logo">
+              </div>
+              <div class="partner-info">
+                <h4>Indian Bank</h4>
+                <p>Quick loan approvals</p>
+              </div>
+            </div>
+
+            <div class="partner-card">
+              <div class="partner-logo-container">
+                <img src="images/partner3.png" alt="Indian Overseas Bank" class="partner-logo">
+              </div>
+              <div class="partner-info">
+                <h4>Indian Overseas Bank</h4>
+                <p>Flexible repayment options</p>
+              </div>
+            </div>
+
+            <div class="partner-card">
+              <div class="partner-logo-container">
+                <img src="images/partner4.png" alt="LIC Housing Finance" class="partner-logo">
+              </div>
+              <div class="partner-info">
+                <h4>LIC Housing Finance</h4>
+                <p>Trusted since 1989</p>
+              </div>
+            </div>
+
+            <div class="partner-card">
+              <div class="partner-logo-container">
+                <img src="images/partner5.png" alt="Punjab & Sind Bank" class="partner-logo">
+              </div>
+              <div class="partner-info">
+                <h4>Punjab & Sind Bank</h4>
+                <p>Personalized service</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="partners-cta">
+            <p>Need help with home loan assistance?</p>
+            <button class="partners-cta-button">
+              <span>Get Expert Guidance</span>
+              <span data-icon="arrowRight"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="bg-slate-50">
+        <div class="container">
+          <h2 class="section-title font-serif" style="text-align: center; margin-bottom: 3rem;">Frequently Asked
+            Questions
+          </h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Do you provide home loan assistance?</span>
+                <span data-icon="chevronDown"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, we have tie-ups with all major banks to help you get the best interest rates and quick
+                  approvals.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How does the registration process work?</span>
+                <span data-icon="chevronDown"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Our legal team handles all documentation, verification, and registration procedures to ensure a
+                  hassle-free experience.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Can I schedule a site visit on weekends?</span>
+                <span data-icon="chevronDown"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely! We arrange site visits 7 days a week. You can also opt for our cab pick-up service.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Is there any cancellation fee?</span>
+                <span data-icon="chevronDown"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Cancellation policies vary by project. Generally, a nominal administrative fee is deducted if
+                  cancelled
+                  before the agreement.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Do you provide interior design services?</span>
+                <span data-icon="chevronDown"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, we offer premium interior design packages for our villas and apartments to help you move in
+                  hassle-free.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What are the maintenance charges?</span>
+                <span data-icon="chevronDown"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Maintenance charges are decided by the Residents' Welfare Association (RWA) upon handover, usually
+                  based
+                  on
+                  per sqft area.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT FORM -->
+      <section class="bg-white">
+        <div class="container">
+          <div class="contact-section">
+            <div class="contact-info">
+              <h2 class="font-serif">Let's Discuss Your Dream Home</h2>
+              <p>Fill out the form and our premium property consultants will get in touch with you shortly.</p>
+              <div class="contact-steps">
+                <div class="contact-step">
+                  <div class="step-number">1</div>
+                  <p>Schedule a free consultation</p>
+                </div>
+                <div class="contact-step">
+                  <div class="step-number">2</div>
+                  <p>Visit properties with our experts</p>
+                </div>
+                <div class="contact-step">
+                  <div class="step-number">3</div>
+                  <p>Secure your home with zero hassle</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-container">
+              <h3>Request a Callback</h3>
+              <form id="contact-form">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+1 (555) 000-0000" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="john@example.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Property Interest</label>
+                  <select>
+                    <option>Apartment</option>
+                    <option>Villa</option>
+                    <option>Plot</option>
+                    <option>Commercial</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="submit-button">Request Callback <span data-icon="send"></span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
   </div>
 
   <!-- TOWNSHIP PLOTTING PAGE -->
@@ -1269,7 +1265,7 @@
             <div class="contact-info-card">
               <h3>Quick Links</h3>
               <div class="quick-links">
-                <a href="Brouchers/Brochures_SST Developers.zip" class="quick-link" download>
+                <a href="#" class="quick-link">
                   <span data-icon="fileText"></span>
                   <span>Download Brochure</span>
                 </a>
@@ -1279,7 +1275,7 @@
                 </a>
                 <a href="#" class="quick-link">
                   <span data-icon="calculator"></span>
-                  <span onclick="openEMIModal()" style="cursor: pointer;">EMI Calculator</span>
+                  <span>EMI Calculator</span>
                 </a>
               </div>
             </div>
@@ -1312,7 +1308,7 @@
         <h2 class="font-serif" style="text-align: center; margin-bottom: 2rem;">Find Us on Map</h2>
         <div class="map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.076326462795!2d85.8672963!3d20.3387841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909e3a628864d%3A0xe530432f919a32c7!2s8VMM%2B2V%20Pahala%2C%20Odisha!5e0!3m2!1sen!2sin!4v1709653123456!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.7262!2d85.8245!3d20.2961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDE3JzQ2LjAiTiA4NcKwNDknMjguMiJF!5e0!3m2!1sen!2sin!4v1234567890"
             width="100%" height="450" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy">
           </iframe>
         </div>
@@ -1355,7 +1351,7 @@
           <ul style="list-style: none;">
             <li class="contact-item">
               <span data-icon="mapPin"></span>
-              <span>8VMM+2V Pahala, Odisha</span>
+              <span>2001, Laxmi Priya Twin City Tower, Pahala, Bhubaneswar</span>
             </li>
             <li class="contact-item">
               <span data-icon="phone"></span>
@@ -1430,8 +1426,8 @@
             <div id="modal-amenities" class="modal-tags"></div>
           </div>
           <div class="modal-actions">
-            <button class="primary-btn" id="modal-download-btn">Download Brochure</button>
-            <button class="secondary-btn" id="modal-request-btn">Request Callback</button>
+            <button class="primary-btn">Download Brochure</button>
+            <button class="secondary-btn">Request Callback</button>
           </div>
         </div>
       </div>
@@ -1458,14 +1454,14 @@
         <!-- Name -->
         <div class="form-group">
           <label>Full Name <span class="required">*</span></label>
-          <input type="text" required placeholder="Uma Shankar">
+          <input type="text" required placeholder="John Doe">
         </div>
 
         <!-- Phone & Email -->
         <div class="form-grid">
           <div class="form-group">
             <label>Phone Number <span class="required">*</span></label>
-            <input type="tel" required placeholder="+91 0000-0000-00">
+            <input type="tel" required placeholder="+91 98611 13075">
           </div>
           <div class="form-group">
             <label>Email Address <span class="required">*</span></label>
@@ -1499,7 +1495,9 @@
             <option value="duplex">Duplex</option>
             <option value="villa">Villa</option>
             <option value="mansion">Mansion</option>
-            <option value="plot">Plot</option>
+            <option value="apartment">Apartment</option>
+            <option value="plot">Plot/Land</option>
+            <option value="commercial">Commercial</option>
           </select>
         </div>
 
@@ -1519,51 +1517,7 @@
     </div>
   </div>
 
-
   <script src="app.js"></script>
-  <!-- EMI CALCULATOR MODAL -->
-  <div id="emi-modal" class="modal-overlay hidden">
-    <div class="schedule-modal-container">
-      <div class="schedule-modal-header">
-        <div>
-          <h2 class="font-serif">EMI Calculator</h2>
-          <p>Estimate your monthly payments</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeEMIModal()" aria-label="Close modal">
-          <span data-icon="x"></span>
-        </button>
-      </div>
-
-      <div class="schedule-modal-form">
-        <div class="form-group">
-          <label>Loan Amount (₹)</label>
-          <input type="number" id="emi-amount" placeholder="e.g. 5000000" value="5000000">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Interest Rate (%)</label>
-            <input type="number" id="emi-rate" placeholder="e.g. 8.5" value="8.5" step="0.1">
-          </div>
-          <div class="form-group">
-            <label>Tenure (Years)</label>
-            <input type="number" id="emi-tenure" placeholder="e.g. 20" value="20">
-          </div>
-        </div>
-
-        <div class="emi-result" id="emi-result-box"
-          style="background: var(--slate-50); padding: 1.5rem; border-radius: 0.5rem; margin-top: 1rem; text-align: center; display: none;">
-          <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 0.5rem;">Monthly EMI</p>
-          <h3 id="emi-value" style="color: var(--primary); font-size: 2rem; font-weight: 700;">₹0</h3>
-          <p style="font-size: 0.8rem; color: var(--slate-500); margin-top: 0.5rem;">Total Interest: <span
-              id="emi-interest">₹0</span></p>
-          <p style="font-size: 0.8rem; color: var(--slate-500);">Total Amount: <span id="emi-total">₹0</span></p>
-        </div>
-
-        <button class="primary-btn" style="width: 100%; margin-top: 1.5rem;" onclick="calculateEMI()">Calculate
-          EMI</button>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>

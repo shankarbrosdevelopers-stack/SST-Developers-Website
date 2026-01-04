@@ -193,15 +193,21 @@ function openVirtualTour() {
 }
 
 function openGoogleMaps() {
-    window.open('https://maps.app.goo.gl/sizUKhK4UD62tTWV8', '_blank');
+    window.open('https://www.google.com/maps/search/?api=1&query=8VMM%2B2V+Pahala%2C+Odisha', '_blank');
 }
 
 // ===== SCHEDULE VISIT MODAL =====
-function openScheduleVisitModal() {
+function openScheduleVisitModal(title = 'Schedule Your Visit') {
     const modal = $('#schedule-visit-modal');
     if (modal) {
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+
+        // Update Title
+        const titleEl = modal.querySelector('h2');
+        if (titleEl) {
+            titleEl.innerText = title;
+        }
 
         // Set minimum date to today
         const dateInput = $('#visit-date');
@@ -239,6 +245,45 @@ function handleScheduleVisitSubmit(e) {
     alert('Thank you! We will contact you shortly to confirm your visit.');
     closeScheduleVisitModal();
 }
+
+// ===== EMI CALCULATOR =====
+function openEMIModal() {
+    $('#emi-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    // Reinject icons
+    $('#emi-modal').querySelectorAll('[data-icon]').forEach(el => {
+        const iconName = el.getAttribute('data-icon');
+        if (icons[iconName]) {
+            el.innerHTML = icons[iconName];
+        }
+    });
+}
+
+function closeEMIModal() {
+    $('#emi-modal').classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+function calculateEMI() {
+    const amount = parseFloat($('#emi-amount').value);
+    const rate = parseFloat($('#emi-rate').value);
+    const tenure = parseFloat($('#emi-tenure').value);
+
+    if (amount && rate && tenure) {
+        const r = rate / 12 / 100;
+        const n = tenure * 12;
+        const emi = amount * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+        const totalPayment = emi * n;
+        const totalInterest = totalPayment - amount;
+
+        $('#emi-value').innerText = '₹' + Math.round(emi).toLocaleString('en-IN');
+        $('#emi-interest').innerText = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
+        $('#emi-total').innerText = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
+        $('#emi-result-box').style.display = 'block';
+    }
+}
+
 
 // ===== MODAL LOGIC =====
 function showProjectDetails(el) {
@@ -311,6 +356,42 @@ function showProjectDetails(el) {
             el.innerHTML = icons[iconName];
         }
     });
+
+    // Handle Brochure Download
+    const downloadBtn = $('#modal-download-btn');
+    if (downloadBtn) {
+        if (d.brochure) {
+            downloadBtn.style.display = 'block'; // Show if available
+            // Clone button to remove old event listeners to prevent multiple clicks
+            const newBtn = downloadBtn.cloneNode(true);
+            downloadBtn.parentNode.replaceChild(newBtn, downloadBtn);
+
+            newBtn.addEventListener('click', () => {
+                const link = document.createElement('a');
+                link.href = d.brochure;
+                link.download = d.brochure.split('/').pop(); // Suggest filename
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        } else {
+            downloadBtn.style.display = 'none'; // Hide if not available
+        }
+    }
+
+    // Handle Request Callback Button (Open Schedule Visit Modal)
+    const requestBtn = $('#modal-request-btn');
+    if (requestBtn) {
+        // Clone to remove old listeners
+        const newRequestBtn = requestBtn.cloneNode(true);
+        requestBtn.parentNode.replaceChild(newRequestBtn, requestBtn);
+
+        newRequestBtn.addEventListener('click', () => {
+            closeModal(); // Close project details modal
+            openScheduleVisitModal('Request Call Back'); // Open schedule visit modal with specific title
+        });
+    }
 }
 
 function closeModal() {
@@ -318,6 +399,81 @@ function closeModal() {
     if (modal) {
         modal.classList.add('hidden');
         document.body.style.overflow = ''; // Restore scroll
+    }
+}
+
+// ===== SEARCH FILTER LOGIC =====
+function handleSearch() {
+    const location = $('#search-location').value;
+    const type = $('#search-type').value;
+    const budget = $('#search-budget').value;
+
+    // Get multiple property cards - ONLY from trending section
+    const cards = $$('#trending-properties .property-card');
+    let matchCount = 0;
+
+    cards.forEach(card => {
+        const d = card.dataset;
+        let isMatch = true;
+
+        // Location Filter (Sub-string match or exact match)
+        if (location && !d.location.toLowerCase().includes(location.toLowerCase())) {
+            isMatch = false;
+        }
+
+        // Type Filter
+        if (type && d.type.toLowerCase() !== type.toLowerCase()) {
+            isMatch = false;
+        }
+
+        // Budget Filter
+        if (budget && isMatch) {
+            // Convert price string to number (Lakhs)
+            let priceInLakhs = 0;
+            const priceStr = d.price;
+
+            if (priceStr.includes('Cr')) {
+                priceInLakhs = parseFloat(priceStr.replace(/[^0-9.]/g, '')) * 100;
+            } else {
+                priceInLakhs = parseFloat(priceStr.replace(/[^0-9.]/g, ''));
+            }
+
+            switch (budget) {
+                case 'under-75l':
+                    if (priceInLakhs >= 75) isMatch = false;
+                    break;
+                case 'under-1cr':
+                    if (priceInLakhs >= 100) isMatch = false;
+                    break;
+                case 'under-2cr':
+                    if (priceInLakhs >= 200) isMatch = false;
+                    break;
+            }
+        }
+
+        // Apply visual state
+        if (isMatch) {
+            card.classList.remove('property-card-dimmed');
+            card.classList.add('property-card-highlighted');
+            matchCount++;
+        } else {
+            card.classList.add('property-card-dimmed');
+            card.classList.remove('property-card-highlighted');
+        }
+    });
+
+    // Reset if no filters active
+    if (!location && !type && !budget) {
+        cards.forEach(card => {
+            card.classList.remove('property-card-dimmed');
+            card.classList.remove('property-card-highlighted');
+        });
+    }
+
+    // Scroll to results
+    const trendingSection = document.getElementById('trending-properties');
+    if (trendingSection) {
+        trendingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -371,11 +527,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target === $('#project-modal')) closeModal();
     });
 
+    // Setup Search
+    $('#search-btn')?.addEventListener('click', handleSearch);
+
     // Initialize first page
     navigate('home');
 
     // Open first FAQ by default
-    if ($$('.faq-item').length > 0) {
-        $$('.faq-item')[0].classList.add('active');
-    }
+    // Open first FAQ by default - DISABLED
+    // if ($$('.faq-item').length > 0) {
+    //     $$('.faq-item')[0].classList.add('active');
+    // }
 });

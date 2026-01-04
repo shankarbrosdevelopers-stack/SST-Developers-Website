@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
-import { Search, MapPin, Home, IndianRupee } from 'lucide-react';
+import { Search, MapPin, Home, IndianRupee, Bed } from 'lucide-react';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  onSearch?: (criteria: { location?: string; type?: string; budget?: string; bhk?: string }) => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onSearch }) => {
   const [location, setLocation] = useState('');
   const [propertyType, setPropertyType] = useState('');
   const [budget, setBudget] = useState('');
+  const [bhk, setBhk] = useState('');
+
+  const handleSearch = () => {
+    if (onSearch) {
+      onSearch({
+        location: location || undefined,
+        type: propertyType || undefined,
+        budget: budget || undefined,
+        bhk: bhk || undefined,
+      });
+    }
+  };
 
   return (
     <section className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center overflow-hidden">
@@ -31,8 +47,8 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* Search Bar */}
-        <div className="w-full max-w-4xl bg-white rounded-2xl p-4 shadow-2xl animate-fade-in-up">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="w-full max-w-5xl bg-white rounded-2xl p-4 shadow-2xl animate-fade-in-up">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             <div className="relative group">
               <div className="flex items-center px-4 py-3 bg-slate-50 rounded-xl border border-transparent group-hover:border-slate-200 transition-all">
                 <MapPin className="text-secondary mr-3" size={20} />
@@ -72,6 +88,26 @@ export const Hero: React.FC = () => {
 
             <div className="relative group">
               <div className="flex items-center px-4 py-3 bg-slate-50 rounded-xl border border-transparent group-hover:border-slate-200 transition-all">
+                <Bed className="text-secondary mr-3" size={20} />
+                <div className="flex flex-col text-left w-full">
+                  <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">BHK</span>
+                  <select
+                    className="bg-transparent text-slate-800 font-semibold focus:outline-none w-full cursor-pointer mt-0.5 appearance-none"
+                    value={bhk}
+                    onChange={(e) => setBhk(e.target.value)}
+                  >
+                    <option value="">Any BHK</option>
+                    <option value="2">2 BHK</option>
+                    <option value="3">3 BHK</option>
+                    <option value="4">4 BHK</option>
+                    <option value="5">5+ BHK</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="flex items-center px-4 py-3 bg-slate-50 rounded-xl border border-transparent group-hover:border-slate-200 transition-all">
                 <IndianRupee className="text-secondary mr-3" size={20} />
                 <div className="flex flex-col text-left w-full">
                   <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Budget</span>
@@ -89,7 +125,10 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            <button className="bg-primary hover:bg-slate-800 text-white font-bold rounded-xl py-3 px-6 flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg">
+            <button
+              onClick={handleSearch}
+              className="bg-primary hover:bg-slate-800 text-white font-bold rounded-xl py-3 px-6 flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg"
+            >
               <Search size={20} />
               <span>Search</span>
             </button>
