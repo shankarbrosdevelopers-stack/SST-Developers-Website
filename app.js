@@ -67,6 +67,15 @@ const icons = {
 let currentPage = 'home';
 let isMobileMenuOpen = false;
 
+// ===== DYNAMIC DATA =====
+const events = [
+    { id: 1, src: "images/event1.jpg", alt: "Team Meeting & Planning" },
+    { id: 2, src: "images/event2.jpg", alt: "Celebrating 10 Years of Excellence" },
+    { id: 3, src: "images/event3.jpg", alt: "Client Appreciation Event" },
+    { id: 4, src: "images/event4.jpg", alt: "New Project Launch" },
+    { id: 5, src: "images/event5.jpg", alt: "Award Ceremony" },
+];
+
 // ===== UTILITY FUNCTIONS =====
 function $(selector) {
     return document.querySelector(selector);
@@ -80,6 +89,30 @@ function createElement(html) {
     const template = document.createElement('template');
     template.innerHTML = html.trim();
     return template.content.firstChild;
+}
+
+function renderGalleryEvents() {
+    const track = $('#event-marquee-track');
+    if (!track) return;
+
+    // Clear existing
+    track.innerHTML = '';
+
+    // Double the events for seamless loop
+    const marqueeItems = [...events, ...events];
+
+    marqueeItems.forEach(event => {
+        const item = createElement(`
+            <div class="marquee-item">
+                <img src="${event.src}" alt="${event.alt}">
+                <div class="marquee-overlay"></div>
+                <div class="marquee-caption">
+                    <span>${event.alt}</span>
+                </div>
+            </div>
+        `);
+        track.appendChild(item);
+    });
 }
 
 // ===== NAVIGATION =====
@@ -529,6 +562,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Setup Search
     $('#search-btn')?.addEventListener('click', handleSearch);
+
+    // Render Dynamic Gallery
+    renderGalleryEvents();
 
     // Initialize first page
     navigate('home');

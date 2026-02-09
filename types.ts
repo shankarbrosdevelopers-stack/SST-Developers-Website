@@ -8,6 +8,7 @@ export interface Property {
   baths: number;
   sqft: number;
   image: string;
+  status?: string;
 }
 
 export interface Project {
@@ -32,4 +33,10 @@ export interface Testimonial {
 export interface FaqItem {
   question: string;
   answer: string;
+}
+
+export interface EventItem {
+  id: number;
+  src: string;
+  alt: string;
 }

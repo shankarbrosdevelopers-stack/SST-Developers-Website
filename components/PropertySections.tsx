@@ -4,12 +4,12 @@ import { Property, Project } from '../types';
 
 // Mock Data
 const FEATURED_PROPERTIES: Property[] = [
-  { id: 1, title: 'Luxury 3BHK Duplex', price: '₹1.05 Cr', location: 'Pahala', type: 'Bungalow', beds: 3, baths: 3, sqft: 1800, image: 'https://picsum.photos/id/12/600/400' },
-  { id: 2, title: 'Grand Royal Mansion', price: '₹85 Lakhs', location: 'Pahala', type: 'Duplex', beds: 5, baths: 5, sqft: 4500, image: 'https://picsum.photos/id/28/600/400' },
-  { id: 3, title: 'Premium 4BHK Villa', price: '₹60 Lakhs', location: 'Pahala', type: 'Duplex', beds: 4, baths: 4, sqft: 2400, image: 'https://picsum.photos/id/188/600/400' },
-  { id: 4, title: 'Modern Duplex Home', price: '₹1.89 Cr', location: 'Gohala', type: 'Mansion', beds: 3, baths: 3, sqft: 2000, image: 'https://picsum.photos/id/164/600/400' },
-  { id: 5, title: 'Elite 4BHK Estate', price: '₹85 Lakhs', location: 'Pahala', type: 'Villa', beds: 4, baths: 4, sqft: 2800, image: 'https://picsum.photos/id/221/600/400' },
-  { id: 6, title: 'Signature Mansion', price: '₹75 Lakhs', location: 'Gohala', type: 'Duplex', beds: 6, baths: 6, sqft: 5000, image: 'https://picsum.photos/id/235/600/400' },
+  { id: 1, title: 'Akshita Paradise', price: '₹1.05 Cr', location: 'Pahala', type: 'Bungalow', beds: 5, baths: 5, sqft: 2500, image: 'images/property5.jpg' },
+  { id: 2, title: 'Akshita Vatika Ph-1', price: '₹85 Lakhs', location: 'Pahala', type: 'Duplex', beds: 3, baths: 5, sqft: 1800, image: 'images/property4.jpg', status: 'Sold Out' },
+  { id: 3, title: 'Akshita Avenue', price: '₹60 Lakhs', location: 'Pahala', type: 'Duplex', beds: 4, baths: 4, sqft: 1700, image: 'images/property6.jpg' },
+  { id: 4, title: 'Akshita Mansion', price: '₹1.89 Cr', location: 'Gohala', type: 'Mansion', beds: 5, baths: 5, sqft: 2000, image: 'images/property1.jpg' },
+  { id: 5, title: 'Akshita Vatika Ph-2', price: '₹85 Lakhs', location: 'Pahala', type: 'Villa', beds: 5, baths: 5, sqft: 1800, image: 'images/property2.jpg' },
+  { id: 6, title: 'Akshita Villas', price: '₹75 Lakhs', location: 'Gohala', type: 'Duplex', beds: 4, baths: 4, sqft: 1700, image: 'images/property3.jpg', status: 'Sold Out' },
 ];
 
 const CATEGORIES = [
@@ -132,11 +132,13 @@ export const FeaturedProperties: React.FC<FeaturedPropertiesProps> = ({
               >
                 <div className="relative h-64 overflow-hidden">
                   <img src={prop.image} alt={prop.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    For Sale
-                  </div>
-                  <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-lg">
-                    <span className="font-bold text-lg">{prop.price}</span>
+                  <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                    <div className="bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-lg">
+                      <span className="font-bold text-lg">{prop.price}</span>
+                    </div>
+                    <div className={`${prop.status === 'Sold Out' ? 'bg-slate-500' : 'bg-[#10b981]'} text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide h-fit`}>
+                      {prop.status || 'For Sale'}
+                    </div>
                   </div>
                 </div>
                 <div className="p-6">

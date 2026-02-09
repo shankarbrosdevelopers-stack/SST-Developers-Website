@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { ShieldCheck, CheckCircle2, IndianRupee, Headset, FileCheck, Star, ChevronDown, ChevronUp, Quote } from 'lucide-react';
-import { Testimonial, FaqItem } from '../types';
+import { Testimonial, FaqItem, EventItem } from '../types';
+import { EVENTS_DATA } from '../data/eventsData';
 
 export const AboutUs: React.FC = () => {
   return (
@@ -9,22 +10,22 @@ export const AboutUs: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
-             <div className="relative">
-               <img src="https://picsum.photos/id/101/600/700" alt="About Us" className="rounded-2xl shadow-2xl w-full object-cover h-[500px]" />
-               <div className="absolute -bottom-10 -right-10 bg-secondary text-white p-8 rounded-2xl shadow-xl hidden md:block">
-                 <p className="text-4xl font-bold mb-1">10+</p>
-                 <p className="font-medium text-sm opacity-90">Years of Experience</p>
-               </div>
-               <div className="absolute -top-10 -left-10 w-40 h-40 bg-slate-100 rounded-full -z-10"></div>
-             </div>
+            <div className="relative">
+              <img src="https://picsum.photos/id/101/600/700" alt="About Us" className="rounded-2xl shadow-2xl w-full object-cover h-[500px]" />
+              <div className="absolute -bottom-10 -right-10 bg-secondary text-white p-8 rounded-2xl shadow-xl hidden md:block">
+                <p className="text-4xl font-bold mb-1">10+</p>
+                <p className="font-medium text-sm opacity-90">Years of Experience</p>
+              </div>
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-slate-100 rounded-full -z-10"></div>
+            </div>
           </div>
           <div className="lg:w-1/2">
             <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Our Story</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-6 leading-tight">10 Years of Building <br/>Trusted Homes</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-6 leading-tight">10 Years of Building <br />Trusted Homes</h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-8">
               At SSTDevelopers, we believe home is more than just a place to live—it's where memories are made. With a decade of experience, we have successfully delivered trusted, high-quality, and legally verified properties to thousands of families. We pride ourselves on transparency, integrity, and unwavering commitment to quality.
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
               <div className="text-center p-4 bg-slate-50 rounded-xl">
                 <p className="text-3xl font-bold text-primary mb-1">1200+</p>
@@ -97,7 +98,7 @@ export const Testimonials: React.FC = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-slate-800 mb-16">What Our Clients Say</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
             <div key={t.id} className="bg-slate-50 p-8 rounded-2xl relative mt-8 hover:bg-white hover:shadow-xl transition-all border border-slate-100">
@@ -126,33 +127,8 @@ export const Testimonials: React.FC = () => {
 };
 
 export const GalleryOfEvents: React.FC = () => {
-  const events = [
-    { 
-      id: 1, 
-      src: "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-      alt: "Client Consultation and Handshake" 
-    },
-    { 
-      id: 2, 
-      src: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-      alt: "Annual Strategy Meeting" 
-    },
-    { 
-      id: 3, 
-      src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-      alt: "Awards Ceremony Celebration" 
-    },
-    { 
-      id: 4, 
-      src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-      alt: "Property Site Visit" 
-    },
-    { 
-      id: 5, 
-      src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-      alt: "Community Event" 
-    },
-  ];
+  // Use centralized data
+  const events = EVENTS_DATA;
 
   // Duplicate the array to create the seamless looping effect
   const marqueeEvents = [...events, ...events];
@@ -163,7 +139,7 @@ export const GalleryOfEvents: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-2">Our Gallery of Events</h2>
         <p className="text-slate-500 text-lg mb-12">A glimpse of our bond with trust</p>
       </div>
-        
+
       <div className="w-full overflow-hidden relative">
         {/* Gradient Fade Effects on Edges */}
         <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
@@ -172,13 +148,13 @@ export const GalleryOfEvents: React.FC = () => {
         {/* Scrolling Track - Standard marquee (Right to Left) */}
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-4">
           {marqueeEvents.map((event, index) => (
-            <div 
-              key={`${event.id}-${index}`} 
+            <div
+              key={`${event.id}-${index}`}
               className="relative group overflow-hidden rounded-2xl h-64 w-96 flex-shrink-0 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer"
             >
-              <img 
-                src={event.src} 
-                alt={event.alt} 
+              <img
+                src={event.src}
+                alt={event.alt}
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
@@ -214,7 +190,7 @@ export const OurPartners: React.FC = () => {
         <div className="w-24 h-1 bg-secondary mx-auto my-4 rounded-full"></div>
         <p className="text-slate-500 text-lg mb-12">Collaborating with industry leaders to deliver excellence</p>
       </div>
-      
+
       <div className="w-full overflow-hidden relative">
         {/* Gradient Fade Effects */}
         <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
@@ -223,13 +199,13 @@ export const OurPartners: React.FC = () => {
         {/* Animate Reverse Marquee (Left to Right) */}
         <div className="flex w-max animate-marquee-reverse hover:[animation-play-state:paused] items-center">
           {marqueePartners.map((partner, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="w-52 h-24 flex items-center justify-center mx-8 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
             >
-              <img 
-                src={`https://placehold.co/300x120/white/0f172a?text=${encodeURIComponent(partner)}&font=playfair`} 
-                alt={partner} 
+              <img
+                src={`https://placehold.co/300x120/white/0f172a?text=${encodeURIComponent(partner)}&font=playfair`}
+                alt={partner}
                 className="max-w-full max-h-full object-contain"
               />
             </div>
@@ -242,7 +218,7 @@ export const OurPartners: React.FC = () => {
 
 export const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  
+
   const faqs: FaqItem[] = [
     { question: "Do you provide home loan assistance?", answer: "Yes, we have tie-ups with all major banks to help you get the best interest rates and quick approvals." },
     { question: "How does the registration process work?", answer: "Our legal team handles all documentation, verification, and registration procedures to ensure a hassle-free experience." },
@@ -256,18 +232,18 @@ export const FAQ: React.FC = () => {
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-slate-800 mb-12">Frequently Asked Questions</h2>
-        
+
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
             <div key={idx} className="bg-white rounded-xl shadow-sm overflow-hidden">
-              <button 
+              <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-colors"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
               >
                 <span className="font-bold text-slate-800">{faq.question}</span>
                 {openIndex === idx ? <ChevronUp className="text-secondary" /> : <ChevronDown className="text-slate-400" />}
               </button>
-              <div 
+              <div
                 className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === idx ? 'max-h-40 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'}`}
               >
                 <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
