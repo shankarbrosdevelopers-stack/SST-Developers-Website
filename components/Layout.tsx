@@ -23,7 +23,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
   const navLinks = [
     { name: 'Home', id: 'home', action: () => onNavigate('home') },
     { name: 'Projects', id: 'projects', action: () => onNavigate('home') },
-    { name: 'Agents', id: 'agents', action: () => onNavigate('home') },
     { name: 'About Us', id: 'about', action: () => onNavigate('about') },
     { name: 'Contact', id: 'contact', action: () => onNavigate('contact') },
     {
@@ -206,13 +205,17 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-          <p>&copy; 2024 SSTDevelopers. All rights reserved.</p>
+          <div className="text-center md:text-left">
+            <p className="mb-2">Website Designed by Masupatri Umashankar</p>
+            <p>&copy; 2025 SSTDevelopers. All rights reserved.</p>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>
             <a href="#" className="hover:text-white">Design Guidelines</a>
           </div>
         </div>
+      </div>
     </footer>
   );
 };

@@ -35,7 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ onSearch }) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center mt-16">
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center mt-32 md:mt-20">
         <span className="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6 animate-fade-in-up">
           Exclusive Luxury Living
         </span>
@@ -60,8 +60,8 @@ export const Hero: React.FC<HeroProps> = ({ onSearch }) => {
                     onChange={(e) => setLocation(e.target.value)}
                   >
                     <option value="">Select Location</option>
-                    <option value="pahala">Pahala</option>
-                    <option value="gohala">Gohala</option>
+                    <option value="gohala, pahala">Gohala, Pahala</option>
+                    <option value="balianta">Balianta</option>
                   </select>
                 </div>
               </div>

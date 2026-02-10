@@ -23,7 +23,11 @@ const ALL_PROPERTIES: Property[] = [
 const propertyMatchesCriteria = (property: Property, criteria: { location?: string; type?: string; budget?: string; bhk?: string }): boolean => {
   // Location filter
   if (criteria.location && criteria.location !== '') {
-    const locationMatch = property.location.toLowerCase() === criteria.location.toLowerCase();
+    const locations = criteria.location.toLowerCase().split(',').map(l => l.trim());
+    const propertyLocation = property.location.toLowerCase();
+
+    // Check if property location matches any of the selected locations
+    const locationMatch = locations.some(loc => propertyLocation.includes(loc));
     if (!locationMatch) return false;
   }
 

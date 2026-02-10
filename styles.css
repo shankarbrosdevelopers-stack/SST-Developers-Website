@@ -387,7 +387,13 @@ header.not-home .mobile-menu-toggle svg {
   z-index: 20;
   text-align: center;
   color: var(--white);
-  margin-top: 4rem;
+  margin-top: 8rem;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    margin-top: 4rem;
+  }
 }
 
 .hero-badge {

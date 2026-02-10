@@ -449,9 +449,15 @@ function handleSearch() {
         const d = card.dataset;
         let isMatch = true;
 
-        // Location Filter (Sub-string match or exact match)
-        if (location && !d.location.toLowerCase().includes(location.toLowerCase())) {
-            isMatch = false;
+        // Location Filter (Sub-string match or exact match, handling multiple values)
+        if (location) {
+            const searchLocations = location.toLowerCase().split(',').map(l => l.trim());
+            const propertyLocation = d.location.toLowerCase();
+
+            const matchFound = searchLocations.some(loc => propertyLocation.includes(loc));
+            if (!matchFound) {
+                isMatch = false;
+            }
         }
 
         // Type Filter
