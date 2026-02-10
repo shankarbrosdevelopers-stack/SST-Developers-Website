@@ -9,14 +9,14 @@ import { Property } from './types';
 
 // All available properties for search
 const ALL_PROPERTIES: Property[] = [
-  { id: 1, title: 'Luxury 3BHK Duplex', price: '₹1.05 Cr', location: 'Pahala', type: 'Duplex', beds: 3, baths: 3, sqft: 1800, image: 'https://picsum.photos/id/12/600/400' },
-  { id: 2, title: 'Grand Royal Mansion', price: '₹85 Lakhs', location: 'Pahala', type: 'Mansion', beds: 5, baths: 5, sqft: 4500, image: 'https://picsum.photos/id/28/600/400' },
-  { id: 3, title: 'Premium 4BHK Villa', price: '₹60 Lakhs', location: 'Pahala', type: 'Villa', beds: 4, baths: 4, sqft: 2400, image: 'https://picsum.photos/id/188/600/400' },
-  { id: 4, title: 'Modern Duplex Home', price: '₹1.89 Cr', location: 'Gohala', type: 'Duplex', beds: 3, baths: 3, sqft: 2000, image: 'https://picsum.photos/id/164/600/400' },
-  { id: 5, title: 'Elite 4BHK Estate', price: '₹85 Lakhs', location: 'Pahala', type: 'Villa', beds: 4, baths: 4, sqft: 2800, image: 'https://picsum.photos/id/221/600/400' },
-  { id: 6, title: 'Signature Mansion', price: '₹75 Lakhs', location: 'Gohala', type: 'Mansion', beds: 6, baths: 6, sqft: 5000, image: 'https://picsum.photos/id/235/600/400' },
-  { id: 7, title: 'Elegant Villa', price: '₹95 Lakhs', location: 'Pahala', type: 'Villa', beds: 4, baths: 3, sqft: 2200, image: 'https://picsum.photos/id/106/600/400' },
-  { id: 8, title: 'Luxury Duplex', price: '₹1.2 Cr', location: 'Gohala', type: 'Duplex', beds: 4, baths: 4, sqft: 2600, image: 'https://picsum.photos/id/112/600/400' },
+  { id: 1, title: 'Luxury 3BHK Duplex', price: '₹1.05 Cr', location: 'Gohala, Pahala, Bhubaneswar', type: 'Duplex', beds: 3, baths: 3, sqft: 1800, image: 'https://picsum.photos/id/12/600/400' },
+  { id: 2, title: 'Grand Royal Mansion', price: '₹85 Lakhs', location: 'Gohala, Pahala, Bhubaneswar', type: 'Mansion', beds: 5, baths: 5, sqft: 4500, image: 'https://picsum.photos/id/28/600/400' },
+  { id: 3, title: 'Premium 4BHK Villa', price: '₹60 Lakhs', location: 'Gohala, Pahala, Bhubaneswar', type: 'Villa', beds: 4, baths: 4, sqft: 2400, image: 'https://picsum.photos/id/188/600/400' },
+  { id: 4, title: 'Modern Duplex Home', price: '₹1.89 Cr', location: 'Gohala, Pahala, Bhubaneswar', type: 'Duplex', beds: 3, baths: 3, sqft: 2000, image: 'https://picsum.photos/id/164/600/400' },
+  { id: 5, title: 'Elite 4BHK Estate', price: '₹85 Lakhs', location: 'Gohala, Pahala, Bhubaneswar', type: 'Villa', beds: 4, baths: 4, sqft: 2800, image: 'https://picsum.photos/id/221/600/400' },
+  { id: 6, title: 'Signature Mansion', price: '₹75 Lakhs', location: 'Gohala, Pahala, Bhubaneswar', type: 'Mansion', beds: 6, baths: 6, sqft: 5000, image: 'https://picsum.photos/id/235/600/400' },
+  { id: 7, title: 'Elegant Villa', price: '₹95 Lakhs', location: 'Gohala, Pahala, Bhubaneswar', type: 'Villa', beds: 4, baths: 3, sqft: 2200, image: 'https://picsum.photos/id/106/600/400' },
+  { id: 8, title: 'Luxury Duplex', price: '₹1.2 Cr', location: 'Gohala, Pahala, Bhubaneswar', type: 'Duplex', beds: 4, baths: 4, sqft: 2600, image: 'https://picsum.photos/id/112/600/400' },
 ];
 
 // Check if a property matches the search criteria
