@@ -108,7 +108,7 @@ const App: React.FC = () => {
             />
             <PropertyCategories />
             <NewProjects />
-            <AboutUs />
+            <AboutUs onNavigate={handleNavigate} />
             <WhyChooseUs />
             <Testimonials />
             <Gallery />

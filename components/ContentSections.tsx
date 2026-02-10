@@ -4,7 +4,7 @@ import { ShieldCheck, CheckCircle2, IndianRupee, Headset, FileCheck, Star, Chevr
 import { Testimonial, FaqItem, EventItem } from '../types';
 import { EVENTS_DATA } from '../data/eventsData';
 
-export const AboutUs: React.FC = () => {
+export const AboutUs: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigate }) => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -41,7 +41,10 @@ export const AboutUs: React.FC = () => {
               </div>
             </div>
 
-            <button className="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-slate-800 transition-colors shadow-lg">
+            <button
+              onClick={() => onNavigate?.('about')}
+              className="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-slate-800 transition-colors shadow-lg"
+            >
               Learn More About Us
             </button>
           </div>

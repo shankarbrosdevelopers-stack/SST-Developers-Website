@@ -4,12 +4,12 @@ import { Property, Project } from '../types';
 
 // Mock Data
 const FEATURED_PROPERTIES: Property[] = [
-  { id: 1, title: 'Akshita Paradise', price: '₹1.05 Cr', location: 'Pahala', type: 'Bungalow', beds: 5, baths: 5, sqft: 2500, image: 'images/property5.jpg' },
+  { id: 1, title: 'Akshita Paradise', price: '₹1.5 Cr', location: 'Pahala', type: 'Bungalow', beds: 5, baths: 5, sqft: 2500, image: 'images/property5.jpg' },
   { id: 2, title: 'Akshita Vatika Ph-1', price: '₹85 Lakhs', location: 'Pahala', type: 'Duplex', beds: 3, baths: 5, sqft: 1800, image: 'images/property4.jpg', status: 'Sold Out' },
-  { id: 3, title: 'Akshita Avenue', price: '₹60 Lakhs', location: 'Pahala', type: 'Duplex', beds: 4, baths: 4, sqft: 1700, image: 'images/property6.jpg' },
-  { id: 4, title: 'Akshita Mansion', price: '₹1.89 Cr', location: 'Gohala', type: 'Mansion', beds: 5, baths: 5, sqft: 2000, image: 'images/property1.jpg' },
-  { id: 5, title: 'Akshita Vatika Ph-2', price: '₹85 Lakhs', location: 'Pahala', type: 'Villa', beds: 5, baths: 5, sqft: 1800, image: 'images/property2.jpg' },
-  { id: 6, title: 'Akshita Villas', price: '₹75 Lakhs', location: 'Gohala', type: 'Duplex', beds: 4, baths: 4, sqft: 1700, image: 'images/property3.jpg', status: 'Sold Out' },
+  { id: 3, title: 'Akshita Avenue', price: '₹60 Lakhs', location: 'Pahala', type: 'Duplex', beds: 4, baths: 4, sqft: 1700, image: 'images/property6.jpg', status: 'Sold Out' },
+  { id: 4, title: 'Akshita Mansion', price: '₹1.89 Cr', location: 'Gohala', type: 'Mansion', beds: 5, baths: 5, sqft: 4000, image: 'images/property1.jpg' },
+  { id: 5, title: 'Akshita Vatika Ph-2', price: '₹85 Lakhs onwards', location: 'Pahala', type: 'Villa', beds: 5, baths: 5, sqft: 1800, image: 'images/property2.jpg' },
+  { id: 6, title: 'Akshita Villas', price: '₹75 Lakhs', location: 'Balianta, Bhubaneswar', type: 'Duplex', beds: 4, baths: 4, sqft: 1800, image: 'images/property3.jpg', status: 'Sold Out' },
 ];
 
 const CATEGORIES = [
