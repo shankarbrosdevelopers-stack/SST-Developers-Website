@@ -214,10 +214,50 @@ function toggleFAQ(index) {
 }
 
 // ===== FORM HANDLER =====
-function handleContactSubmit(e) {
+// Posts form data to the backend at /admin
+async function handleContactSubmit(e) {
     e.preventDefault();
-    alert('Thank you for your interest! We will contact you soon.');
-    e.target.reset();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnHTML = submitBtn.innerHTML;
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending...';
+
+    // FormData automatically picks up all named fields
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch('/admin', {
+            method: 'POST',
+            body: data   // multipart/form-data is set automatically by FormData
+        });
+
+        if (response.ok) {
+            // Show success message
+            form.innerHTML = `
+                <div style="text-align:center; padding: 2rem 1rem;">
+                    <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
+                    <h3 style="color: var(--primary); font-size:1.5rem; margin-bottom:0.5rem;">Thank You!</h3>
+                    <p style="color: #64748b;">We've received your request and will contact you shortly.</p>
+                </div>
+            `;
+        } else {
+            alert('Something went wrong. Please try again or call us directly.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML;
+            // Re-inject icon
+            submitBtn.querySelectorAll('[data-icon]').forEach(el => {
+                const iconName = el.getAttribute('data-icon');
+                if (icons[iconName]) el.innerHTML = icons[iconName];
+            });
+        }
+    } catch (error) {
+        alert('Network error. Please check your connection and try again.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+    }
 }
 
 // ===== EXTERNAL LINKS =====
