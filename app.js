@@ -229,7 +229,7 @@ async function handleContactSubmit(e) {
     const data = new FormData(form);
 
     try {
-        const response = await fetch('/admin', {
+        const response = await fetch('/admin/enquiry', {
             method: 'POST',
             body: data   // multipart/form-data is set automatically by FormData
         });
