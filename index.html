@@ -738,7 +738,7 @@
           </div>
           <div class="contact-form-container">
             <h3>Request a Callback</h3>
-            <form id="contact-form" method="post" enctype="multipart/form-data" action="/admin/enquiry">
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" method="post" enctype="multipart/form-data" action="/admin/enquiry">
               <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" name="fullname" placeholder="Full Name" required>
