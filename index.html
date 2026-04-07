@@ -856,8 +856,233 @@
     <section class="bg-slate-50" style="padding: 5rem 0;">
       <div class="container">
         <div id="properties-list-container" class="property-grid">
-          <!-- All properties will be listed here in a future step -->
-          <p class="text-center" style="width: 100%; grid-column: 1 / -1; color: var(--slate-500); font-size: 1.125rem;">Properties listing coming in the next step.</p>
+          <!-- Featured Properties -->
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Paradise"
+            data-price="₹1.55 Cr" data-location="Gohala, Pahala, Bhubaneswar" data-type="Bungalow" data-beds="5"
+            data-baths="5" data-sqft="2500" data-image="images/property5.jpg"
+            data-amenities="Private Garden,Power Backup,24/7 Security,Clubhouse" data-brochure="Brouchers/1.pdf">
+            <div class="property-image">
+              <img src="images/property5.jpg" alt="Property">
+              <div class="property-badges-container">
+                <div class="property-price">₹1.55 Cr</div>
+                <div class="property-badge" style="background: #10b981;">For Sale</div>
+              </div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Bungalow</div>
+              <h3 class="property-title">Akshita Paradise</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohala, Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 5 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 2500 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Vatika Ph-1"
+            data-price="₹85 Lakhs" data-location="Gohala, Pahala, Bhubaneswar" data-type="Duplex" data-beds="3,4"
+            data-baths="5" data-sqft="1800" data-image="images/property4.jpg"
+            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym" data-brochure="Brouchers/2.pdf">
+            <div class="property-image">
+              <img src="images/property4.jpg" alt="Property">
+              <div class="property-badges-container">
+                <div class="property-price">₹85 Lakhs</div>
+                <div class="property-badge" style="background: #64748b;">Sold Out</div>
+              </div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Duplex</div>
+              <h3 class="property-title">Akshita Vatika Ph-1</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohala, Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 3,4 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1800 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Avenue"
+            data-price="₹60 Lakhs" data-location="Gohala, Pahala, Bhubaneswar" data-type="Duplex" data-beds="2,3,4"
+            data-baths="2,3,4" data-sqft="1700" data-image="images/property6.jpg"
+            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom" data-brochure="Brouchers/3.pdf">
+            <div class="property-image">
+              <img src="images/property6.jpg" alt="Property">
+              <div class="property-badges-container">
+                <div class="property-price">₹60 Lakhs</div>
+                <div class="property-badge" style="background: #64748b;">Sold Out</div>
+              </div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Duplex</div>
+              <h3 class="property-title">Akshita Avenue</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohala, Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 2,3,4 Beds</div>
+                <div class="property-feature"><span data-icon="bath"></span> 2,3,4 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1700 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Mansion"
+            data-price="₹2.05 Cr" data-location="Gohala, Pahala, Bhubaneswar" data-type="Mansion" data-beds="5"
+            data-baths="5" data-sqft="4000" data-image="images/property1.jpg"
+            data-amenities="Lift Service,Multi-purpose Hall,Terrace Garden,Rain Water Harvesting"
+            data-brochure="Brouchers/4.pdf">
+            <div class="property-image">
+              <img src="images/property1.jpg" alt="Property">
+              <div class="property-badges-container">
+                <div class="property-price">₹2.05 Cr</div>
+                <div class="property-badge" style="background: #10b981;">For Sale</div>
+              </div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Mansion</div>
+              <h3 class="property-title">Akshita Mansion</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohala, Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 5 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 5 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 4000 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Vatika Ph-2"
+            data-price="₹95 Lakhs onwards" data-location="Gohala, Pahala, Bhubaneswar" data-type="Villa"
+            data-beds="3,4,5" data-baths="3,4,5" data-sqft="1800" data-image="images/property2.jpg"
+            data-amenities="Swimming Pool,Jogging Track,CCTV Surveillance,Intercom" data-brochure="Brouchers/5.pdf">
+            <div class="property-image">
+              <img src="images/property2.jpg" alt="Property">
+              <div class="property-badges-container">
+                <div class="property-price">₹95 Lakhs onwards</div>
+                <div class="property-badge" style="background: #10b981;">For Sale</div>
+              </div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Villa</div>
+              <h3 class="property-title">Akshita Vatika Ph-2</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Gohala, Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 3/4/5 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 3/4/5Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1800 sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Villas"
+            data-price="₹85 Lakhs" data-location="Balianta, Bhubaneswar" data-type="Duplex" data-beds="3,4"
+            data-baths="3,4" data-sqft="1800" data-image="images/property3.jpg"
+            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym" data-brochure="Brouchers/6.pdf">
+            <div class="property-image">
+              <img src="images/property3.jpg" alt="Property">
+              <div class="property-badges-container">
+                <div class="property-price">₹85 Lakhs</div>
+                <div class="property-badge" style="background: #64748b;">Sold Out</div>
+              </div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Duplex</div>
+              <h3 class="property-title">Akshita Villas</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Balianta, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 3/4 BHK</div>
+                <div class="property-feature"><span data-icon="bath"></span> 3/4 Baths</div>
+                <div class="property-feature"><span data-icon="move"></span> 1800sqft</div>
+              </div>
+              <button class="property-button">View Details</button>
+            </div>
+          </div>
+
+          <!-- Upcoming Projects -->
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Aranya Township"
+            data-price="1.5 Lakhs - 2.5 Lakhs" data-location="Khallikote, Ganjam" data-type="Township"
+            data-area="2500 Acres" data-rera="RERA-12345" data-image="images/property11.jpg"
+            data-amenities="Gated Community,Eco-Friendly,Children Play Area,Gym,Swimming Pool,RERA Approved">
+            <div class="property-image">
+              <img src="images/property11.jpg" alt="Township Plotting">
+              <div class="property-badge" style="background: #dc2626;">Registration Open</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Township</div>
+              <h3 class="property-title">Aranya Township</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Khallikote, Ganjam</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="landPlot"></span> 2500 Acres</div>
+                <div class="property-feature"><span data-icon="shieldCheck"></span> RERA Approved</div>
+              </div>
+              <button class="property-button" style="background: var(--secondary); color: white; border: none;">View
+                Details</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Ashiyana"
+            data-price="₹1.2 Cr - ₹2.5 Cr" data-location="Dhauli, Bhubaneswar" data-type="Luxury Apartments"
+            data-possession="Dec 2026" data-rera="RERA-67890" data-image="images/property8.jpg"
+            data-amenities="Infinity Pool,Garden,Parking,Clubhouse">
+            <div class="property-image">
+              <img src="images/property8.jpg" alt="Upcoming Villa">
+              <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Luxury Apartments</div>
+              <h3 class="property-title">Akshita Ashiyana</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Dhauli, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 4,5 BHK</div>
+                <div class="property-feature"><span data-icon="move"></span> 3500 sqft</div>
+              </div>
+              <button class="property-button">Notify Me</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Akshita Harmony"
+            data-price="₹95L - ₹1.5 Cr" data-location="Chandaka, Bhubaneswar" data-type="Luxury Apartments & Villas"
+            data-possession="Jun 2027" data-rera="RERA-11223" data-image="images/property9.jpg"
+            data-amenities="Business Center,Valet Parking,Security,Gym">
+            <div class="property-image">
+              <img src="images/property9.jpg" alt="Commercial Hub">
+              <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Luxury Apartments & Villas</div>
+              <h3 class="property-title">Akshita Harmony</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Chandaka, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="building"></span> 4 BHK</div>
+                <div class="property-feature"><span data-icon="move"></span> 500-2000 sqft</div>
+              </div>
+              <button class="property-button">Notify Me</button>
+            </div>
+          </div>
+
+          <div class="property-card" onclick="showProjectDetails(this)" data-title="Sudhansu Enclaves"
+            data-price="₹1.25 Cr" data-location="Jaypur, Pahala, Bhubaneswar" data-type="Apartments"
+            data-possession="Ready to Move" data-rera="RERA-44556" data-image="images/property10.jpg"
+            data-amenities="Temple,Garden,Security,Car Parking">
+            <div class="property-image">
+              <img src="images/property10.jpg" alt="Apartment Complex">
+              <div class="property-badge" style="background: var(--accent);">Coming Soon</div>
+            </div>
+            <div class="property-info">
+              <div class="property-type">Apartments</div>
+              <h3 class="property-title">Sudhansu Enclaves</h3>
+              <div class="property-location"><span data-icon="mapPin"></span>Jaypur, Pahala, Bhubaneswar</div>
+              <div class="property-features">
+                <div class="property-feature"><span data-icon="bed"></span> 2,3 BHK</div>
+                <div class="property-feature"><span data-icon="move"></span> 1200-1600 sqft</div>
+              </div>
+              <button class="property-button">Notify Me</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
