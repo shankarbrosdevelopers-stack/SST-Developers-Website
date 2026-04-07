@@ -6,13 +6,15 @@ export const BlogPage: React.FC = () => {
   return (
     <div className="pt-24 min-h-screen bg-white">
       {/* Blog Hero */}
-      <section className="bg-slate-50 py-16 mb-12">
-        <div className="container mx-auto px-4 text-center">
-          <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block animate-in fade-in slide-in-from-bottom-2">Our Insights</span>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-6 animate-in fade-in slide-in-from-bottom-4">SST <span className="text-primary">Blog</span></h1>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-6">
-            Everything you need to know about real estate in Bhubaneswar. We answer four essential questions about investment, locations, and property types.
-          </p>
+      <section className="contact-hero">
+        <div className="container mx-auto px-4">
+          <div className="contact-hero-content">
+            <span className="contact-badge animate-in fade-in slide-in-from-bottom-2">Our Insights</span>
+            <h1 className="font-serif animate-in fade-in slide-in-from-bottom-4">SST <span className="text-secondary">Blog</span></h1>
+            <p className="animate-in fade-in slide-in-from-bottom-6">
+              We answer four essential questions about real estate in Bhubaneswar, helping you make informed decisions for your future home.
+            </p>
+          </div>
         </div>
       </section>
 
