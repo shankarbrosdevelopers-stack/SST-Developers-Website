@@ -1561,6 +1561,43 @@
   </div>
 
   <script src="app.js"></script>
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/91986113075" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white">
+      <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.46 2.024 7.748L0 32l8.476-2.003A15.934 15.934 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.773-1.847l-.486-.29-5.03 1.188 1.21-4.908-.317-.504A13.271 13.271 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.29-9.874c-.4-.2-2.366-1.168-2.733-1.302-.367-.133-.634-.2-.9.2-.267.4-1.034 1.302-1.267 1.568-.233.267-.467.3-.867.1-.4-.2-1.689-.623-3.217-1.984-1.189-1.06-1.991-2.369-2.224-2.769-.233-.4-.025-.616.175-.815.18-.18.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.9-2.168-1.233-2.968-.325-.78-.655-.674-.9-.687-.233-.012-.5-.015-.767-.015-.267 0-.7.1-1.067.5-.367.4-1.4 1.368-1.4 3.336 0 1.968 1.433 3.87 1.633 4.137.2.267 2.82 4.307 6.833 6.037.955.413 1.7.659 2.281.843.958.305 1.831.262 2.52.159.769-.114 2.366-.967 2.7-1.9.333-.933.333-1.733.233-1.9-.1-.167-.367-.267-.767-.467z"/>
+    </svg>
+  </a>
+
+  <style>
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      background-color: #25D366;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: wa-pulse 2.5s infinite;
+    }
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.7);
+    }
+    .whatsapp-fab svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+    @keyframes wa-pulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); }
+      50% { box-shadow: 0 4px 32px rgba(37, 211, 102, 0.85); }
+    }
+  </style>
 </body>
 
 </html>
