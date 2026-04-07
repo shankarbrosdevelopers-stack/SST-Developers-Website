@@ -23,6 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
   const navLinks = [
     { name: 'Home', id: 'home', action: () => onNavigate('home') },
     { name: 'Projects', id: 'projects', action: () => onNavigate('home') },
+    { name: 'Blog', id: 'blog', action: () => onNavigate('blog') },
     { name: 'About Us', id: 'about', action: () => onNavigate('about') },
     { name: 'Contact', id: 'contact', action: () => onNavigate('contact') },
     {

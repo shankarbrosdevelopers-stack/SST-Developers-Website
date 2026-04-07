@@ -40,3 +40,13 @@ export interface EventItem {
   src: string;
   alt: string;
 }
+
+export interface BlogPost {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  image: string;
+  category: string;
+  readTime: string;
+}

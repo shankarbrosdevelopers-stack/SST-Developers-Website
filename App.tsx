@@ -5,6 +5,7 @@ import { FeaturedProperties, PropertyCategories, NewProjects, Gallery } from './
 import { AboutUs, WhyChooseUs, Testimonials, FAQ, GalleryOfEvents, OurPartners } from './components/ContentSections';
 import { ContactForm } from './components/ContactForm';
 import { AboutPage } from './components/AboutPage';
+import { BlogPage } from './components/BlogPage';
 import { Property } from './types';
 
 // All available properties for search
@@ -138,6 +139,10 @@ const App: React.FC = () => {
             <OurPartners />
             <FAQ />
           </div>
+        )}
+
+        {currentPage === 'blog' && (
+          <BlogPage />
         )}
       </main>
       <Footer />
