@@ -57,6 +57,88 @@
         height: 28px;
       }
     }
+
+    /* MORE PROPERTIES CARD */
+    .more-properties-card {
+      background: linear-gradient(135deg, var(--secondary) 0%, #a02c4a 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      height: 100%;
+      min-height: 400px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(109, 30, 54, 0.2);
+    }
+
+    .more-properties-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(109, 30, 54, 0.3);
+    }
+
+    .more-properties-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .more-properties-card:hover::before {
+      opacity: 1;
+    }
+
+    .more-card-icon {
+      background: rgba(255, 255, 255, 0.2);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .more-card-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .more-card-text {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .more-card-btn {
+      background: white;
+      color: var(--secondary);
+      padding: 0.875rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .more-properties-card:hover .more-card-btn {
+      padding: 0.875rem 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 
@@ -365,9 +447,6 @@
             <h2 class="section-title font-serif">Upcoming Projects</h2>
             <p class="section-subtitle">Exclusive previews of our future landmarks.</p>
           </div>
-          <button
-            style="display: flex; align-items: center; color: var(--secondary); font-weight: 700; background: none;">View
-            All Projects <span data-icon="arrowRight" style="margin-left: 0.5rem;"></span></button>
         </div>
 
         <div class="property-grid">
@@ -449,6 +528,18 @@
                 <div class="property-feature"><span data-icon="move"></span> 1200-1600 sqft</div>
               </div>
               <button class="property-button">Notify Me</button>
+            </div>
+          </div>
+
+          <!-- CHECK MORE PROPERTIES CTA -->
+          <div class="more-properties-card" onclick="navigate('properties')">
+            <div class="more-card-icon">
+              <span data-icon="layoutGrid" style="width: 40px; height: 40px; color: white;"></span>
+            </div>
+            <h3 class="more-card-title font-serif">Explore More</h3>
+            <p class="more-card-text">Discover our entire collection of premium properties and future landmarks.</p>
+            <div class="more-card-btn">
+              View All Properties <span data-icon="arrowRight"></span>
             </div>
           </div>
         </div>
