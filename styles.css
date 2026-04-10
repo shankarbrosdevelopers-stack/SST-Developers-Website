@@ -3475,3 +3475,60 @@ footer {
   .blog-modal-footer button { width: 100%; }
 }
 
+/* ===== FOOTER SEO SECTION ===== */
+.footer-seo {
+  padding: 3rem 0;
+  border-top: 1px solid var(--slate-100);
+  background: var(--white);
+}
+
+.footer-seo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--slate-800);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-seo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.seo-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--slate-50);
+  color: var(--slate-600);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 99px;
+  border: 1px solid var(--slate-200);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.seo-tag:hover {
+  background: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(109, 30, 54, 0.15);
+}
+
+@media (max-width: 768px) {
+  .footer-seo {
+    padding: 2rem 0;
+  }
+  .seo-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
