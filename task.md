@@ -1,0 +1,4 @@
+- [ ] Update `data/blogData.ts` with new entries
+- [ ] Update `index.html` with new blog card HTML structures
+- [ ] Verify UI consistency and content
+- [ ] Finalize walkthrough

@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BLOG_POSTS } from '../data/blogData';
-import { Calendar, Clock, ArrowRight, Heart } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Heart, X, Send } from 'lucide-react';
+import { BlogPost } from '../types';
 
 export const BlogPage: React.FC = () => {
+  const [selectedBlog, setSelectedBlog] = useState<BlogPost | null>(null);
+
+  const openBlog = (blog: BlogPost) => {
+    setSelectedBlog(blog);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeBlog = () => {
+    setSelectedBlog(null);
+    document.body.style.overflow = 'unset';
+  };
+
   return (
     <div className="pt-24 min-h-screen bg-white">
       {/* Blog Hero */}
@@ -58,7 +71,10 @@ export const BlogPage: React.FC = () => {
                     {post.excerpt}
                   </p>
                   <div className="flex items-center justify-between border-t border-slate-50 pt-6">
-                    <button className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                    <button 
+                      onClick={() => openBlog(post)}
+                      className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
+                    >
                       Read Article <ArrowRight size={18} />
                     </button>
                     <button className="flex items-center gap-1.5 text-slate-400 hover:text-red-500 transition-colors">
@@ -72,6 +88,70 @@ export const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Blog Detail Modal */}
+      {selectedBlog && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
+          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] overflow-hidden shadow-2xl flex flex-col animate-in slide-in-from-bottom-8 duration-500">
+            {/* Modal Header */}
+            <div className="relative p-8 md:p-12 pb-6 flex justify-between items-start bg-slate-50/50">
+              <div className="max-w-2xl">
+                <span className="inline-block px-3 py-1 bg-secondary text-white text-[10px] font-bold uppercase tracking-wider rounded-full mb-4">
+                  {selectedBlog.category}
+                </span>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 leading-tight">
+                  {selectedBlog.title}
+                </h2>
+                <div className="flex items-center gap-6 mt-6 text-slate-500 text-sm font-medium">
+                  <span className="flex items-center gap-2">
+                    <Calendar size={16} className="text-secondary" />
+                    {selectedBlog.date}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Clock size={16} className="text-secondary" />
+                    {selectedBlog.readTime}
+                  </span>
+                </div>
+              </div>
+              <button 
+                onClick={closeBlog}
+                className="p-2 hover:bg-white rounded-full transition-colors text-slate-400 hover:text-primary shadow-sm"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            {/* Scrollable Content */}
+            <div className="flex-grow overflow-y-auto p-8 md:p-12 pt-0">
+              <div className="rounded-2xl overflow-hidden mb-8 shadow-lg aspect-video">
+                <img 
+                  src={selectedBlog.image} 
+                  alt={selectedBlog.title} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              <div 
+                className="prose prose-slate prose-lg max-w-none text-slate-600 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: selectedBlog.content || '' }}
+              />
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-8 border-t border-slate-100 flex flex-col md:flex-row gap-4 justify-between items-center bg-slate-50/30">
+              <button 
+                onClick={closeBlog}
+                className="px-8 py-3 text-slate-600 font-bold hover:text-primary transition-colors order-2 md:order-1"
+              >
+                Close Article
+              </button>
+              <button className="w-full md:w-auto px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-slate-800 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-primary/20 order-1 md:order-2">
+                Contact For Details <Send size={18} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

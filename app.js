@@ -164,7 +164,9 @@ function navigate(page, scrollTo = null) {
             }
         }, 100);
     } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
     }
 }
 
@@ -467,6 +469,115 @@ function showProjectDetails(el) {
     }
 }
 
+// ===== BLOG DATA =====
+const BLOG_POSTS = [
+    {
+        id: 1,
+        title: 'Where are the best places to buy properties in Bhubaneswar?',
+        date: 'April 07, 2024',
+        readTime: '6 min read',
+        category: 'Real Estate Guide',
+        image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        content: `
+            <p>Bhubaneswar, the Temple City of India, is rapidly transforming into a modern urban hub. With its growing IT sector, educational institutions, and improved infrastructure, real estate in Bhubaneswar is a hot topic for investors and homebuyers alike.</p>
+            <h3>1. Patia & Infocity Area</h3>
+            <p>Patia remains the most sought-after residential destination in North Bhubaneswar. Being close to the Infocity IT hub, it offers excellent rental yields and high appreciation rates.</p>
+            <h3>2. Pahala & Hanspal</h3>
+            <p>Located on the Cuttack-Bhubaneswar National Highway (NH-16), these areas have seen exponential growth. They offer a perfect blend of connectivity to both major cities.</p>
+            <h3>3. Old Town</h3>
+            <p>For those who love heritage and spirituality, Old Town is the choice. Surrounding areas like Pokhariput offer premium residential options with a touch of history.</p>
+            <h3>4. Kalinga Nagar & Ghatikia</h3>
+            <p>With the expansion of the TCS campus, Kalinga Nagar is emerging as the "New Bhubaneswar" with well-planned layouts and wide roads.</p>
+        `
+    },
+    {
+        id: 2,
+        title: 'How should you invest in Bhubaneswar real estate?',
+        date: 'April 05, 2024',
+        readTime: '8 min read',
+        category: 'Investment',
+        image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        content: `
+            <p>Investing in real estate is one of the most reliable ways to build wealth. Here's how you should approach it in Bhubaneswar:</p>
+            <h3>1. Choose the Right Asset Type</h3>
+            <p>Apartments are popular in IT-centric areas like Patia, while independent duplexes are highly valued in developing zones like Hanspal.</p>
+            <h3>2. Verify RERA Compliance</h3>
+            <p>Always ensure the project is registered under O-RERA to protect your investment from delays.</p>
+            <h3>3. Location vs. Price</h3>
+            <p>While central locations offer stability, the highest ROI often comes from emerging corridors along the proposed Metro route.</p>
+        `
+    },
+    {
+        id: 3,
+        title: 'Duplex vs Apartments: Which is the right choice for you?',
+        date: 'April 02, 2024',
+        readTime: '5 min read',
+        category: 'Lifestyle',
+        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        content: `
+            <p>Choosing between a duplex and an apartment depends on your lifestyle priorities:</p>
+            <h3>Ownership and Freedom</h3>
+            <p><strong>Duplex:</strong> You own the land and the structure, offering superior privacy and the freedom to renovate.</p>
+            <p><strong>Apartment:</strong> You share common areas and costs, offering a lower-maintenance lifestyle.</p>
+            <h3>Security and Amenities</h3>
+            <p>Apartments usually offer better gated security and shared amenities like gyms and pools in one complex.</p>
+        `
+    },
+    {
+        id: 4,
+        title: 'What are the top upcoming residential hotspots in Bhubaneswar?',
+        date: 'March 28, 2024',
+        readTime: '7 min read',
+        category: 'Market Trends',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        content: `
+            <p>Expansion is moving towards the city outskirts. Here are the hottest emerging zones:</p>
+            <h3>1. Info Valley (Janla-Jatni Road)</h3>
+            <p>With the second IT SEZ development, Info Valley is attracting major residential townships.</p>
+            <h3>2. Balianta & Pipili Road</h3>
+            <p>Affordable housing projects are surging here, with improved connectivity via the proposed outer ring road.</p>
+            <h3>3. Rangamatia Area</h3>
+            <p>Competitive rates and proximity to industrial centers make this a smart choice for long-term growth.</p>
+        `
+    },
+    {
+        id: 5,
+        title: 'Cost of building a house in Odisha: 2024 Estimates',
+        date: 'April 08, 2024',
+        readTime: '6 min read',
+        category: 'Construction Cost',
+        image: 'images/blog-construction.png',
+        content: `
+            <p>In 2024, construction costs in Odisha range from ₹1,500 to ₹2,500+ per sq.ft. depending on quality:</p>
+            <h3>Material Rates</h3>
+            <ul>
+                <li>Cement: ₹360 - ₹420 per bag</li>
+                <li>Steel: ₹62 - ₹70 per kg</li>
+                <li>Bricks: ₹8 - ₹12 per unit</li>
+            </ul>
+            <h3>Total Estimates</h3>
+            <p>A standard 1000 sq.ft home can cost between ₹18 Lakhs to ₹22 Lakhs for construction alone.</p>
+        `
+    },
+    {
+        id: 6,
+        title: 'The Ultimate Buyer\'s Guide for Real Estate in Bhubaneswar',
+        date: 'April 08, 2024',
+        readTime: '10 min read',
+        category: 'Real Estate Guide',
+        image: 'images/blog-buyer-guide.png',
+        content: `
+            <p>Follow these steps for a smooth property purchase in Bhubaneswar:</p>
+            <h3>1. Legal Verification</h3>
+            <p>Verify the ROR (Patta) and ensure the land is converted to Gharabari (Residential).</p>
+            <h3>2. RERA Check</h3>
+            <p>Verify the project on the O-RERA website to ensure sanctioned plans and timelines are followed.</p>
+            <h3>3. Financials</h3>
+            <p>Factor in 5-7% registration costs and stamp duty in your total budget.</p>
+        `
+    }
+];
+
 function closeModal() {
     const modal = $('#project-modal');
     if (modal) {
@@ -474,6 +585,56 @@ function closeModal() {
         document.body.style.overflow = ''; // Restore scroll
     }
 }
+
+// ===== BLOG MODAL LOGIC =====
+window.showBlogDetails = function(id) {
+    const modal = $('#blog-modal');
+    if (!modal) {
+        console.error('Blog modal not found');
+        return;
+    }
+
+    const post = BLOG_POSTS.find(p => p.id === id);
+    if (!post) {
+        console.error('Blog post not found:', id);
+        return;
+    }
+
+    // Populate
+    const titleEl = $('#blog-modal-title');
+    const dateEl = $('#blog-modal-date');
+    const readtimeEl = $('#blog-modal-readtime');
+    const categoryEl = $('#blog-modal-category');
+    const imgEl = $('#blog-modal-img');
+    const textEl = $('#blog-modal-text');
+
+    if (titleEl) titleEl.innerText = post.title;
+    if (dateEl) dateEl.innerText = post.date;
+    if (readtimeEl) readtimeEl.innerText = post.readTime;
+    if (categoryEl) categoryEl.innerText = post.category;
+    if (imgEl) imgEl.src = post.image;
+    if (textEl) textEl.innerHTML = post.content;
+
+    // Show
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    // Reinject icons
+    modal.querySelectorAll('[data-icon]').forEach(el => {
+        const iconName = el.getAttribute('data-icon');
+        if (icons[iconName]) {
+            el.innerHTML = icons[iconName];
+        }
+    });
+};
+
+window.closeBlogModal = function() {
+    const modal = $('#blog-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+};
 
 // ===== SEARCH FILTER LOGIC =====
 function handleSearch() {

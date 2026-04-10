@@ -1380,11 +1380,11 @@
         <div class="footer-section">
           <h3 class="font-serif">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="#" data-page="home">Home</a></li>
-            <li><a href="#" data-page="about">About Us</a></li>
-            <li><a href="#">Properties</a></li>
-            <li><a href="#">New Projects</a></li>
-            <li><a href="#" data-page="contact">Contact</a></li>
+            <li><a href="javascript:void(0)" data-page="home">Home</a></li>
+            <li><a href="javascript:void(0)" data-page="about">About Us</a></li>
+            <li><a href="javascript:void(0)" data-page="blog">Blog</a></li>
+            <li><a href="javascript:void(0)" data-page="home" data-scroll-to="trending-properties">Properties</a></li>
+            <li><a href="javascript:void(0)" data-page="contact">Contact</a></li>
           </ul>
         </div>
 
@@ -1590,7 +1590,7 @@
               </div>
               <h3 class="blog-card-title">Where are the best places to buy properties in Bhubaneswar?</h3>
               <p class="blog-card-excerpt">Discover the most promising neighborhoods in Bhubaneswar that offer the best mix of luxury, connectivity, and future appreciation.</p>
-              <a href="#" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
+              <a href="javascript:void(0)" onclick="showBlogDetails(1)" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
             </div>
           </div>
 
@@ -1607,7 +1607,7 @@
               </div>
               <h3 class="blog-card-title">How should you invest in Bhubaneswar real estate?</h3>
               <p class="blog-card-excerpt">Looking to invest in Odisha's capital? Here is a comprehensive guide to maximizing your returns in the Temple City.</p>
-              <a href="#" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
+              <a href="javascript:void(0)" onclick="showBlogDetails(2)" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
             </div>
           </div>
 
@@ -1624,7 +1624,7 @@
               </div>
               <h3 class="blog-card-title">Duplex vs Apartments: Which is the right choice for you?</h3>
               <p class="blog-card-excerpt">Should you go for a spacious independent duplex or a low-maintenance apartment? We weigh the pros and cons for Bhubaneswar residents.</p>
-              <a href="#" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
+              <a href="javascript:void(0)" onclick="showBlogDetails(3)" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
             </div>
           </div>
 
@@ -1641,7 +1641,7 @@
               </div>
               <h3 class="blog-card-title">What are the top upcoming residential hotspots in Bhubaneswar?</h3>
               <p class="blog-card-excerpt">Get ahead of the curve! Explore the emerging areas around Bhubaneswar that are poised to become the next residential hotspots.</p>
-              <a href="#" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
+              <a href="javascript:void(0)" onclick="showBlogDetails(4)" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
             </div>
           </div>
 
@@ -1658,7 +1658,7 @@
               </div>
               <h3 class="blog-card-title">Cost of building a house in Odisha: 2024 Estimates</h3>
               <p class="blog-card-excerpt">Plan your dream home with confidence. We break down the latest construction costs, material prices, and labor rates in Odisha for 2024.</p>
-              <a href="#" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
+              <a href="javascript:void(0)" onclick="showBlogDetails(5)" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
             </div>
           </div>
 
@@ -1675,13 +1675,47 @@
               </div>
               <h3 class="blog-card-title">The Ultimate Buyer's Guide for Real Estate in Bhubaneswar</h3>
               <p class="blog-card-excerpt">Navigating the property market can be complex. Our comprehensive guide covers everything from legal verification to final possession.</p>
-              <a href="#" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
+              <a href="javascript:void(0)" onclick="showBlogDetails(6)" class="blog-read-more">Read Article <span data-icon="arrowRight"></span></a>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
+
+  <!-- BLOG MODAL -->
+  <div id="blog-modal" class="modal-overlay hidden" onclick="if(event.target===this) closeBlogModal()">
+    <div class="blog-modal-container">
+
+      <!-- Hero Image with Overlay -->
+      <div class="blog-modal-hero">
+        <img id="blog-modal-img" src="" alt="Blog Image">
+        <div class="blog-modal-hero-overlay">
+          <span id="blog-modal-category" class="blog-modal-badge"></span>
+          <h2 id="blog-modal-title" class="blog-modal-title font-serif"></h2>
+          <div class="blog-modal-meta">
+            <span><span data-icon="calendar"></span> <span id="blog-modal-date"></span></span>
+            <span class="blog-modal-dot">&middot;</span>
+            <span><span data-icon="clock"></span> <span id="blog-modal-readtime"></span></span>
+          </div>
+        </div>
+        <button class="blog-modal-close" onclick="closeBlogModal()">
+          <span data-icon="x"></span>
+        </button>
+      </div>
+
+      <!-- Article Body -->
+      <div class="blog-modal-body">
+        <div id="blog-modal-text" class="blog-article-content"></div>
+        <div class="blog-modal-footer">
+          <button class="secondary-btn" onclick="closeBlogModal()">&#8592; Close</button>
+          <button class="primary-btn" onclick="closeBlogModal(); openScheduleVisitModal('Contact us')">Contact for Details</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
   <script src="app.js"></script>
   <!-- WHATSAPP FAB -->

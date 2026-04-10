@@ -3261,3 +3261,190 @@ footer {
 .blog-read-more:hover {
   gap: 0.75rem;
 }
+/* =========================================
+   BLOG MODAL — PROFESSIONAL EDITORIAL DESIGN
+   ========================================= */
+
+@keyframes blogModalIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.blog-modal-container {
+  background: #fff;
+  width: 95%;
+  max-width: 780px;
+  max-height: 88vh;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  animation: blogModalIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.28);
+}
+
+/* ── Hero image ── */
+.blog-modal-hero {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #1e293b;
+}
+
+.blog-modal-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.72;
+  display: block;
+}
+
+/* Gradient from bottom up so text is readable */
+.blog-modal-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 15, 28, 0.92) 0%,
+    rgba(10, 15, 28, 0.5)  55%,
+    transparent            100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem 2rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.blog-modal-badge {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  background: var(--secondary, #6d1e36);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 99px;
+  width: fit-content;
+}
+
+.blog-modal-title {
+  font-size: 1.45rem;
+  color: #fff;
+  line-height: 1.28;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.blog-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.blog-modal-meta svg { vertical-align: middle; }
+.blog-modal-dot { opacity: 0.5; font-size: 1.1rem; line-height: 1; }
+
+/* Close button — floating on hero */
+.blog-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.blog-modal-close:hover { background: rgba(0,0,0,0.75); }
+.blog-modal-close svg  { width: 16px; height: 16px; }
+
+/* ── Scrollable Article Body ── */
+.blog-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem 2.25rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Article typography */
+.blog-article-content {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #3c4861;
+}
+
+.blog-article-content p {
+  margin: 0 0 1.25rem;
+}
+
+.blog-article-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 1.75rem 0 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.blog-article-content ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.4rem;
+}
+
+.blog-article-content li {
+  margin-bottom: 0.45rem;
+  color: #475569;
+}
+
+.blog-article-content strong { color: #1e293b; }
+
+/* ── Footer buttons ── */
+.blog-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 0 1.5rem;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 1.5rem;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .blog-modal-container {
+    width: 100%;
+    max-height: 100dvh;
+    border-radius: 1.25rem 1.25rem 0 0;
+    margin-top: auto;
+  }
+  .blog-modal-hero { height: 200px; }
+  .blog-modal-hero-overlay { padding: 1.25rem 1.25rem 1rem; }
+  .blog-modal-title { font-size: 1.15rem; }
+  .blog-modal-body { padding: 1.5rem 1.25rem 0; }
+  .blog-modal-footer { flex-direction: column; }
+  .blog-modal-footer button { width: 100%; }
+}
+
