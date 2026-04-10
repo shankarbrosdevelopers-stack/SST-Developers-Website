@@ -668,6 +668,73 @@ window.closeBlogModal = function() {
     }
 };
 
+window.openFounderModal = function() {
+    const modal = $('#founder-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        // Reinject icons just to be safe
+        modal.querySelectorAll('[data-icon]').forEach(el => {
+            const iconName = el.getAttribute('data-icon');
+            if (icons[iconName]) {
+                el.innerHTML = icons[iconName];
+            }
+        });
+    }
+};
+
+window.closeFounderModal = function() {
+    const modal = $('#founder-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+};
+
+window.openDirectorModal = function() {
+    const modal = $('#director-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        modal.querySelectorAll('[data-icon]').forEach(el => {
+            const iconName = el.getAttribute('data-icon');
+            if (icons[iconName]) {
+                el.innerHTML = icons[iconName];
+            }
+        });
+    }
+};
+
+window.closeDirectorModal = function() {
+    const modal = $('#director-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+};
+
+window.openManagerModal = function() {
+    const modal = $('#manager-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        modal.querySelectorAll('[data-icon]').forEach(el => {
+            const iconName = el.getAttribute('data-icon');
+            if (icons[iconName]) {
+                el.innerHTML = icons[iconName];
+            }
+        });
+    }
+};
+
+window.closeManagerModal = function() {
+    const modal = $('#manager-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+};
+
 // ===== SEARCH FILTER LOGIC =====
 function handleSearch() {
     const location = $('#search-location').value;

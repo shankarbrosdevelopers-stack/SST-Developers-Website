@@ -1014,12 +1014,15 @@
             <div class="leader-info">
               <h3>Subrat Kumar Raj</h3>
               <span class="leader-title">Founder & Managing Director</span>
-              <p class="leader-bio">With over 15 years of experience in real estate development, Subrat leads our vision
-                of creating sustainable, premium living spaces. His strategic insights and commitment to quality have
-                positioned SSTDevelopers as a trusted name in Bhubaneswar's real estate landscape.</p>
-              <div class="leader-stats">
+              <p class="leader-bio">With a vision to transform modern living, SST Developers was founded on the core principles of trust, quality, and innovation. What began as a commitment to build better spaces has evolved into a journey of shaping lifestyles and creating communities where people truly belong.</p>
+              
+              <button onclick="openFounderModal()" style="color: var(--primary); background: none; border: none; font-weight: 600; cursor: pointer; padding: 0.5rem 0; margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                Read Founder's Message <span data-icon="arrowRight"></span>
+              </button>
+
+              <div class="leader-stats" style="margin-top: 1.5rem;">
                 <div class="leader-stat">
-                  <span class="stat-number">15+</span>
+                  <span class="stat-number">19+</span>
                   <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="leader-stat">
@@ -1047,6 +1050,9 @@
               <p class="leader-bio">Suchismita brings exceptional expertise in project management and operations. Her
                 meticulous attention to detail ensures every project meets the highest standards of construction quality
                 and timely delivery, making her the backbone of our operational excellence.</p>
+              <button onclick="openDirectorModal()" style="color: var(--primary); background: none; border: none; font-weight: 600; cursor: pointer; padding: 0.5rem 0; margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                Read More <span data-icon="arrowRight"></span>
+              </button>
               <div class="leader-stats">
                 <div class="leader-stat">
                   <span class="stat-number">12+</span>
@@ -1077,6 +1083,9 @@
               <p class="leader-bio">Tanmay's innovative strategies and deep understanding of customer needs have been
                 instrumental in building strong relationships with our clients. His dedication to excellence and
                 customer satisfaction ensures that every family finds their perfect home with us.</p>
+              <button onclick="openManagerModal()" style="color: var(--primary); background: none; border: none; font-weight: 600; cursor: pointer; padding: 0.5rem 0; margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                Read More <span data-icon="arrowRight"></span>
+              </button>
               <div class="leader-stats">
                 <div class="leader-stat">
                   <span class="stat-number">10+</span>
@@ -1815,10 +1824,97 @@
           <button class="primary-btn" onclick="closeBlogModal(); openScheduleVisitModal('Contact us')">Contact for Details</button>
         </div>
       </div>
-
     </div>
   </div>
 
+  <!-- FOUNDER MODAL -->
+  <div id="founder-modal" class="modal-overlay hidden" onclick="if(event.target===this) closeFounderModal()">
+    <div class="blog-modal-container" style="max-width: 800px;">
+      <!-- Hero Image with Overlay -->
+      <div class="blog-modal-hero" style="height: 300px;">
+        <img src="images/md.jpg" alt="Mr. Subrat Kumar Raj" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+        <div class="blog-modal-hero-overlay">
+          <span class="blog-modal-badge">Founder's Message</span>
+          <h2 class="blog-modal-title font-serif">Mr. Subrat Kumar Raj</h2>
+          <div class="blog-modal-meta">
+            <span>Founder & Managing Director</span>
+          </div>
+        </div>
+        <button class="blog-modal-close" onclick="closeFounderModal()">
+          <span data-icon="x"></span>
+        </button>
+      </div>
+
+      <!-- Article Body -->
+      <div class="blog-modal-body">
+        <div class="blog-article-content">
+          <p>With over 19 years of experience in the real estate industry, we have grown alongside the aspirations of countless families, understanding their needs, dreams, and expectations. This deep insight allows us to go beyond constructing buildings—we create homes that reflect comfort, warmth, and a sense of security.</p>
+          <p>Since 2007, our journey has been guided by a simple yet powerful belief: a home is not just a structure, but a space where life unfolds. Every project we undertake is thoughtfully planned, combining modern design with practical functionality to deliver long-term value. We focus on developing well planned communities that foster connection, convenience, and a better quality of life.</p>
+          <p>At SST Developers, excellence is not just a goal—it is a standard we strive to achieve in every detail. From the choice of location to the quality of construction and customer experience, we ensure that every step reflects our dedication to perfection.</p>
+          <p>More than just building properties, we are proud to build lasting relationships with our customers—relationships rooted in transparency, reliability, and trust. As we continue to grow, our mission remains unchanged: to deliver spaces that people are proud to call home, today and for generations to come.</p>
+        </div>
+        <div class="blog-modal-footer">
+          <button class="secondary-btn" onclick="closeFounderModal()">← Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIRECTOR MODAL -->
+  <div id="director-modal" class="modal-overlay hidden" onclick="if(event.target===this) closeDirectorModal()">
+    <div class="blog-modal-container" style="max-width: 800px;">
+      <div class="blog-modal-hero" style="height: 300px;">
+        <img src="images/director.jpg" alt="Suchismita Pati" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+        <div class="blog-modal-hero-overlay">
+          <span class="blog-modal-badge">Director's Profile</span>
+          <h2 class="blog-modal-title font-serif">Suchismita Pati</h2>
+          <div class="blog-modal-meta">
+            <span>Director</span>
+          </div>
+        </div>
+        <button class="blog-modal-close" onclick="closeDirectorModal()">
+          <span data-icon="x"></span>
+        </button>
+      </div>
+      <div class="blog-modal-body">
+        <div class="blog-article-content">
+          <p>Suchismita brings exceptional expertise in project management and operations. Her meticulous attention to detail ensures every project meets the highest standards of construction quality and timely delivery, making her the backbone of our operational excellence.</p>
+          <p>With a keen eye for architectural nuances and a steadfast commitment to urban development, she has successfully spearheaded numerous high-profile residential projects. Her leadership approach is rooted in collaborative problem-solving, consistently optimizing resources while prioritizing sustainability and modern engineering practices. Under her guidance, SST Developers continues to translate ambitious blueprints into tangible, thriving communities.</p>
+        </div>
+        <div class="blog-modal-footer">
+          <button class="secondary-btn" onclick="closeDirectorModal()">← Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MANAGER MODAL -->
+  <div id="manager-modal" class="modal-overlay hidden" onclick="if(event.target===this) closeManagerModal()">
+    <div class="blog-modal-container" style="max-width: 800px;">
+      <div class="blog-modal-hero" style="height: 300px;">
+        <img src="images/marketing-manager.jpg" alt="Tanmay Kumar Sahu" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+        <div class="blog-modal-hero-overlay">
+          <span class="blog-modal-badge">Manager Profile</span>
+          <h2 class="blog-modal-title font-serif">Tanmay Kumar Sahu</h2>
+          <div class="blog-modal-meta">
+            <span>Senior Manager</span>
+          </div>
+        </div>
+        <button class="blog-modal-close" onclick="closeManagerModal()">
+          <span data-icon="x"></span>
+        </button>
+      </div>
+      <div class="blog-modal-body">
+        <div class="blog-article-content">
+          <p>Tanmay's innovative strategies and deep understanding of customer needs have been instrumental in building strong relationships with our clients. His dedication to excellence and customer satisfaction ensures that every family finds their perfect home with us.</p>
+          <p>Drawing from over a decade of market analysis and strategic brand positioning, he effectively bridges the gap between prospective homeowners and their ideal living spaces. Tanmay has fundamentally revamped our outreach initiatives, ensuring that trust and transparency remain at the forefront of every client interaction. His forward-thinking vision continually drives the company's growth, securing SST Developers' reputation as a customer-first real estate titan.</p>
+        </div>
+        <div class="blog-modal-footer">
+          <button class="secondary-btn" onclick="closeManagerModal()">← Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
   <!-- WHATSAPP FAB -->
