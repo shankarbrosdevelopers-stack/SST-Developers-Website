@@ -420,6 +420,36 @@ function showProjectDetails(el) {
         amenitiesSection.classList.add('hidden');
     }
 
+    // Compact Highlights
+    const highlightsSection = $('#modal-highlights-section');
+    const highlightsContainer = $('#modal-highlights');
+    if (highlightsSection && highlightsContainer) {
+        highlightsContainer.innerHTML = '';
+        if (d.highlights) {
+            highlightsSection.classList.remove('hidden');
+            d.highlights.split(',').forEach(h => {
+                const span = document.createElement('span');
+                span.className = 'modal-highlight-tag';
+                span.textContent = h.trim();
+                highlightsContainer.appendChild(span);
+            });
+        } else {
+            highlightsSection.classList.add('hidden');
+        }
+    }
+
+    // Compact Description
+    const descSection = $('#modal-description-section');
+    const descEl = $('#modal-description');
+    if (descSection && descEl) {
+        if (d.description) {
+            descSection.classList.remove('hidden');
+            descEl.textContent = d.description;
+        } else {
+            descSection.classList.add('hidden');
+        }
+    }
+
     // Show modal
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden'; // Prevent scroll

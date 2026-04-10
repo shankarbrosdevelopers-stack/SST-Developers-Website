@@ -9,6 +9,8 @@ export interface Property {
   sqft: number;
   image: string;
   status?: string;
+  description?: string;
+  highlights?: string[];
 }
 
 export interface Project {

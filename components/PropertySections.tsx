@@ -4,12 +4,36 @@ import { Property, Project } from '../types';
 
 // Mock Data
 const FEATURED_PROPERTIES: Property[] = [
-  { id: 1, title: 'Akshita Paradise', price: '₹1.55 Cr', location: 'Pahala', type: 'Bungalow', beds: 5, baths: 5, sqft: 2500, image: 'images/property5.jpg' },
-  { id: 2, title: 'Akshita Vatika Ph-1', price: '₹85 Lakhs', location: 'Pahala', type: 'Duplex', beds: 3, baths: 5, sqft: 1800, image: 'images/property4.jpg', status: 'Sold Out' },
-  { id: 3, title: 'Akshita Avenue', price: '₹60 Lakhs', location: 'Pahala', type: 'Duplex', beds: 4, baths: 4, sqft: 1700, image: 'images/property6.jpg', status: 'Sold Out' },
-  { id: 4, title: 'Akshita Mansion', price: '₹2.05 Cr', location: 'Gohala', type: 'Mansion', beds: 5, baths: 5, sqft: 4000, image: 'images/property1.jpg' },
-  { id: 5, title: 'Akshita Vatika Ph-2', price: '₹95 Lakhs onwards', location: 'Pahala', type: 'Villa', beds: 5, baths: 5, sqft: 1800, image: 'images/property2.jpg' },
-  { id: 6, title: 'Akshita Villas', price: '₹85 Lakhs', location: 'Balianta, Bhubaneswar', type: 'Duplex', beds: 4, baths: 4, sqft: 1800, image: 'images/property3.jpg', status: 'Sold Out' },
+  { 
+    id: 1, title: 'Akshita Paradise', price: '₹1.55 Cr', location: 'Pahala', type: 'Bungalow', beds: 5, baths: 5, sqft: 2500, image: 'images/property5.jpg',
+    description: 'A premium 5BHK luxury bungalow located in the high-growth Pahala region. This landmark project offers a sophisticated lifestyle with spacious interiors, a private verdant garden, and premium construction quality. Perfectly suited for families seeking elegance and tranquility within a well-connected gated community.',
+    highlights: ['Premium', 'Private Garden', 'Vastu Compliant']
+  },
+  { 
+    id: 2, title: 'Akshita Vatika Ph-1', price: '₹85 Lakhs', location: 'Pahala', type: 'Duplex', beds: 3, baths: 5, sqft: 1800, image: 'images/property4.jpg', status: 'Sold Out',
+    description: 'A flagship gated duplex community that has become a landmark for residential excellence in Pahala. Strategically located near the NH-16 corridor, it offers seamless connectivity to Bhubaneswar and Cuttack. Known for its lush green spaces and robust construction, providing a safe and premium environment for its residents.',
+    highlights: ['Gated', 'Near NH-16', 'Sold Out']
+  },
+  { 
+    id: 3, title: 'Akshita Avenue', price: '₹60 Lakhs', location: 'Pahala', type: 'Duplex', beds: 4, baths: 4, sqft: 1700, image: 'images/property6.jpg', status: 'Sold Out',
+    description: 'Offering unbeatable value, these 3 & 4 BHK duplexes in Gohala provide modern living at an affordable price point. Each unit is thoughtfully designed to maximize space and natural light. With 24/7 security and family-friendly amenities, it remains one of our most successful sold-out residential projects.',
+    highlights: ['Best Value', 'Corner Plot', 'Sold Out']
+  },
+  { 
+    id: 4, title: 'Akshita Mansion', price: '₹2.05 Cr', location: 'Gohala', type: 'Mansion', beds: 5, baths: 5, sqft: 4000, image: 'images/property1.jpg',
+    description: 'The pinnacle of luxury living, these 5BHK mansions in Gohala offer an elite lifestyle with exquisite teakwood finishing and a private terrace garden. Designed for the discerning homeowner, the project includes high-end features like a private lift and eco-friendly rain-water harvesting. It represents the gold standard of architectural craftsmanship.',
+    highlights: ['Elite Lifestyle', 'Terrace', 'Ready to Move']
+  },
+  { 
+    id: 5, title: 'Akshita Vatika Ph-2', price: '₹95 Lakhs onwards', location: 'Pahala', type: 'Villa', beds: 5, baths: 5, sqft: 1800, image: 'images/property2.jpg',
+    description: 'Modern independent villas featuring direct frontage on the NH-16, offering the perfect blend of suburban peace and urban convenience. Residents enjoy access to a fully-equipped clubhouse, swimming pool, and 24/7 CCTV surveillance. These solar-ready homes are designed for sustainable, high-end living in a premium location.',
+    highlights: ['For Sale', 'NH-16 Frontage', 'Clubhouse']
+  },
+  { 
+    id: 6, title: 'Akshita Villas', price: '₹85 Lakhs', location: 'Balianta, Bhubaneswar', type: 'Duplex', beds: 4, baths: 4, sqft: 1800, image: 'images/property3.jpg', status: 'Sold Out',
+    description: 'Located near the prestigious AIIMS Bhubaneswar, these eco-friendly duplexes offer incredible investment potential in a rapidly developing corridor. The project is designed for families looking for proximity to the airport and top-tier healthcare facilities. A sold-out success that prioritizes green living and community safety.',
+    highlights: ['Investment', 'Near AIIMS', 'Eco-Friendly']
+  },
 ];
 
 const CATEGORIES = [
