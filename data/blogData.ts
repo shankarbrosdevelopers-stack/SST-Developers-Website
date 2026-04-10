@@ -36,5 +36,23 @@ export const BLOG_POSTS: BlogPost[] = [
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     category: 'Market Trends',
     readTime: '7 min read'
+  },
+  {
+    id: 5,
+    title: 'Cost of building a house in Odisha: 2024 Estimates',
+    excerpt: 'Plan your dream home with confidence. We break down the latest construction costs, material prices, and labor rates in Odisha for 2024.',
+    date: 'April 08, 2024',
+    image: 'images/blog-construction.png',
+    category: 'Construction Cost',
+    readTime: '6 min read'
+  },
+  {
+    id: 6,
+    title: 'The Ultimate Buyer\'s Guide for Real Estate in Bhubaneswar',
+    excerpt: 'Navigating the property market can be complex. Our comprehensive guide covers everything from legal verification to final possession.',
+    date: 'April 08, 2024',
+    image: 'images/blog-buyer-guide.png',
+    category: 'Real Estate Guide',
+    readTime: '10 min read'
   }
 ];
